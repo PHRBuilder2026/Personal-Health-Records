@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHR Health Records — Your Health Data, On Your Device</title>
+  <meta name="description" content="PHR Health Records is a private, on-device personal health record app for iPad and Mac. No cloud, no accounts, no tracking — just your data under your control.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+          <path d="M16 6C10.5 6 6 10.5 6 16s4.5 10 10 10 10-4.5 10-10S21.5 6 16 6zm-1 15h-2v-6h2v6zm4 0h-2v-9h2v9z" fill="white"/>
+        </svg>
+        PHR Health Records
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-badge">Available on iPad &amp; Mac</div>
+    <h1>Your Health Records,<br>Privately Yours</h1>
+    <p>PHR Health Records keeps your medical information securely stored on your device. No cloud, no accounts, no tracking — just your data, under your control.</p>
+    <div class="hero-buttons">
+      <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Download on the App Store</a>
+      <a href="features.html" class="btn btn-outline">See Features</a>
+    </div>
+  </section>
+
+  <!-- Screenshot Carousel -->
+  <section class="section section-center">
+    <h2 class="section-title">See PHR in Action</h2>
+    <p class="section-subtitle">A clean, intuitive interface designed for managing your family's health records.</p>
+    <div class="screenshots-row">
+      <img src="screenshots/1_Patient_Info.png" alt="Patient Information screen">
+      <img src="screenshots/2_Medications.png" alt="Medications screen">
+      <img src="screenshots/3_Lab_Results.png" alt="Lab Results screen">
+      <img src="screenshots/4_Lab_Matrix_Report.png" alt="Lab Results Matrix Report">
+      <img src="screenshots/5_Medication_Checklist.png" alt="Medication Checklist Report">
+    </div>
+  </section>
+
+  <!-- Key Features Overview -->
+  <section class="section section-center" style="background: var(--phr-green-light); max-width: 100%; padding-left: 24px; padding-right: 24px;">
+    <div style="max-width: var(--max-width); margin: 0 auto;">
+      <h2 class="section-title">Everything You Need</h2>
+      <p class="section-subtitle">Track every aspect of your health in one secure place.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#128138;</div>
+          <h3>Medications</h3>
+          <p>Track active and past medications, dosages, refill schedules, and check for drug interactions via the FDA database.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#129656;</div>
+          <h3>Lab Results</h3>
+          <p>Record lab tests with automatic high/low/normal evaluation. View results in a color-coded matrix across dates.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128153;</div>
+          <h3>Conditions</h3>
+          <p>Maintain a history of medical conditions — active, chronic, resolved — with provider notes and family history.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#127973;</div>
+          <h3>Care Team</h3>
+          <p>Keep contact details for all your healthcare providers, specialists, and facilities in one organized place.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128203;</div>
+          <h3>Reports &amp; PDF Export</h3>
+          <p>Generate comprehensive health reports and travel summaries. Export to PDF or Excel for sharing with providers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128106;</div>
+          <h3>Multi-Patient</h3>
+          <p>Manage health records for your entire family. Separate databases for each person with password protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Highlight -->
+  <section class="section section-center">
+    <h2 class="section-title">Privacy First. Always.</h2>
+    <p class="section-subtitle">Your health data never leaves your device unless you choose to share it.</p>
+    <div class="privacy-grid">
+      <div class="privacy-card">
+        <div class="icon">&#128274;</div>
+        <div>
+          <h3>On-Device Storage Only</h3>
+          <p>All data stays in a secure SQLite database on your device. No cloud syncing, no remote servers.</p>
+        </div>
+      </div>
+      <div class="privacy-card">
+        <div class="icon">&#128683;</div>
+        <div>
+          <h3>No Accounts Required</h3>
+          <p>No sign-up, no email, no account creation. Start using PHR the moment you download it.</p>
+        </div>
+      </div>
+      <div class="privacy-card">
+        <div class="icon">&#128065;</div>
+        <div>
+          <h3>No Tracking or Telemetry</h3>
+          <p>Zero analytics, zero usage tracking. We never see your data and have no way to access it.</p>
+        </div>
+      </div>
+      <div class="privacy-card">
+        <div class="icon">&#128230;</div>
+        <div>
+          <h3>You Control Your Backups</h3>
+          <p>Back up to your own storage — external drive, iCloud Drive, wherever you choose. We never touch it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Take Control of Your Health Records</h2>
+    <p>Download PHR Health Records today — it's free and completely private.</p>
+    <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Download on the App Store</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>PHR Health Records</h3>
+        <p>A personal health record app by Evans &amp; Associates PHR, LLC. Your health data, securely on your device.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:evansassocphr@gmail.com">evansassocphr@gmail.com</a></li>
+          <li><a href="support.html">Get Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Evans &amp; Associates PHR, LLC. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

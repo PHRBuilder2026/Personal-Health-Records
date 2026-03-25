@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support — PHR Health Records</title>
+  <meta name="description" content="Get help with PHR Health Records. Find answers to common questions or contact Evans & Associates PHR support.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+          <path d="M16 6C10.5 6 6 10.5 6 16s4.5 10 10 10 10-4.5 10-10S21.5 6 16 6zm-1 15h-2v-6h2v6zm4 0h-2v-9h2v9z" fill="white"/>
+        </svg>
+        PHR Health Records
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html" class="active">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Support</h1>
+    <p>We're here to help you get the most out of PHR Health Records.</p>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="content-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">Where is my data stored?</h3>
+    <p>All your health data is stored locally on your device in a private, sandboxed database. PHR never uploads your data to the cloud or any server. Your information stays on your iPad or Mac at all times.</p>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">How do I back up my records?</h3>
+    <p>Go to Settings &rarr; Backup in the app. You can choose a backup location such as an external drive or iCloud Drive. We recommend backing up regularly so your data is safe if you ever change devices.</p>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">How do I restore my data on a new device?</h3>
+    <p>Download PHR from the App Store on your new device. Go to Settings &rarr; Restore and point to your backup location. PHR will find your backed-up databases and let you restore them. Patient records will be automatically registered.</p>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">Can I manage records for my family?</h3>
+    <p>Yes. PHR supports multiple patients. Each person gets their own separate database with optional password protection. Use the patient switcher in the sidebar to move between family members.</p>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">What does the drug interaction check do?</h3>
+    <p>When viewing medications, the Interaction button queries the FDA's public database (api.fda.gov) to check for known interactions between your active medications. This is the only network call the app makes, and no personal data is transmitted — only medication names.</p>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">Can I export my records?</h3>
+    <p>Yes. PHR can export your data in two ways: as a multi-section PDF report (great for sharing with doctors) or as an Excel spreadsheet with one worksheet per data section. Go to Settings &rarr; Export or use the Print menu.</p>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">Is PHR available for iPhone?</h3>
+    <p>PHR is currently available for iPad and Mac. The app is designed for the larger screen to provide the best experience working with detailed health records and reports.</p>
+
+    <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 28px; margin-bottom: 8px;">Is PHR HIPAA compliant?</h3>
+    <p>PHR is a personal-use application. It is not a Covered Entity under HIPAA and is not intended for use by healthcare providers or insurers. Because your data never leaves your device, there is no server-side data to protect — you have full control.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" style="background: var(--phr-green-light); max-width: 100%; padding-left: 24px; padding-right: 24px;">
+    <div style="max-width: var(--max-width); margin: 0 auto;">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact Us</h3>
+          <p>Have a question, found a bug, or want to suggest a feature? We'd love to hear from you.</p>
+          <p><strong>Email:</strong><br><a href="mailto:evansassocphr@gmail.com">evansassocphr@gmail.com</a></p>
+          <p><strong>In-App Support:</strong><br>You can also submit a support request directly from within the app at Settings &rarr; Contact Support.</p>
+          <p><strong>Response Time:</strong><br>We typically respond within 1–2 business days.</p>
+        </div>
+        <div>
+          <form class="contact-form" action="mailto:evansassocphr@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="First and last name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Bug report, feature request, question...">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us what's on your mind..." required></textarea>
+
+            <button type="submit" class="btn btn-primary" style="background: var(--phr-green); color: white;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>PHR Health Records</h3>
+        <p>A personal health record app by Evans &amp; Associates PHR, LLC. Your health data, securely on your device.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:evansassocphr@gmail.com">evansassocphr@gmail.com</a></li>
+          <li><a href="support.html">Get Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Evans &amp; Associates PHR, LLC. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

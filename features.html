@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features — PHR Health Records</title>
+  <meta name="description" content="Explore PHR's comprehensive health record features: medications, lab results, vitals, conditions, immunizations, care team, insurance, and more.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+          <path d="M16 6C10.5 6 6 10.5 6 16s4.5 10 10 10 10-4.5 10-10S21.5 6 16 6zm-1 15h-2v-6h2v6zm4 0h-2v-9h2v9z" fill="white"/>
+        </svg>
+        PHR Health Records
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html" class="active">Features</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="support.html">Support</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Features</h1>
+    <p>A comprehensive personal health record — 16 modules to manage every aspect of your health.</p>
+  </section>
+
+  <!-- Feature Details -->
+  <section class="section">
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/1_Patient_Info.png" alt="Patient Information screen">
+      </div>
+      <div>
+        <h3>Patient Information</h3>
+        <p>Your central health profile with personal details, emergency contacts, blood type, and more. Supports multiple countries with adaptive address and phone formatting.</p>
+        <ul class="feature-list">
+          <li>Complete personal health profile</li>
+          <li>Emergency contact information</li>
+          <li>Multi-country address support (US, Canada, UK, Australia, Germany, France)</li>
+          <li>Password protection per patient</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/2_Medications.png" alt="Medications screen">
+      </div>
+      <div>
+        <h3>Medications</h3>
+        <p>Track all your medications — prescriptions, over-the-counter, and supplements. Manage dosages, refill schedules, and check for potential drug interactions.</p>
+        <ul class="feature-list">
+          <li>Active and discontinued medication tracking</li>
+          <li>Dosage schedules (daily, weekly, as needed, every-other-day)</li>
+          <li>Refill tracking with pharmacy details</li>
+          <li>FDA drug interaction checker</li>
+          <li>Drug allergy alerts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/3_Lab_Results.png" alt="Lab Results screen">
+      </div>
+      <div>
+        <h3>Lab Results</h3>
+        <p>Record and monitor lab tests over time. PHR automatically evaluates results against normal ranges and highlights values that need attention.</p>
+        <ul class="feature-list">
+          <li>Automatic high/low/normal evaluation</li>
+          <li>Color-coded indicators for quick review</li>
+          <li>Panel-based organization (CBC, metabolic, lipid, etc.)</li>
+          <li>Customizable normal ranges</li>
+          <li>Historical trending across dates</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/4_Lab_Matrix_Report.png" alt="Lab Matrix Report">
+      </div>
+      <div>
+        <h3>Reports &amp; PDF Export</h3>
+        <p>Generate comprehensive health reports combining data from any section. The matrix view shows lab trends at a glance across dates.</p>
+        <ul class="feature-list">
+          <li>Combined multi-section health report</li>
+          <li>Lab results matrix view with color indicators</li>
+          <li>Travel health summary for trips</li>
+          <li>Save as PDF with page numbers</li>
+          <li>Export all data to Excel (.xlsx)</li>
+        </ul>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- All Modules Grid -->
+  <section class="section section-center" style="background: var(--phr-green-light); max-width: 100%; padding-left: 24px; padding-right: 24px;">
+    <div style="max-width: var(--max-width); margin: 0 auto;">
+      <h2 class="section-title">All 16 Health Modules</h2>
+      <p class="section-subtitle">Everything you need to maintain a complete personal health record.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">&#128100;</div>
+          <h3>Patient Profile</h3>
+          <p>Personal details, emergency contacts, blood type, and demographic information.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128138;</div>
+          <h3>Medications</h3>
+          <p>Active and past medications with dosages, refills, and interaction checking.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#129656;</div>
+          <h3>Lab Results</h3>
+          <p>Test results with automatic evaluation and color-coded matrix reports.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128153;</div>
+          <h3>Conditions</h3>
+          <p>Medical conditions — active, chronic, resolved — with family history tracking.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#129514;</div>
+          <h3>Allergies</h3>
+          <p>Drug, food, and environmental allergies with reaction details and severity.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#129657;</div>
+          <h3>Vitals</h3>
+          <p>Blood pressure, heart rate, weight, temperature, and other vital signs over time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128137;</div>
+          <h3>Treatments</h3>
+          <p>Physical therapy, mental health, and other ongoing treatment plans.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#129658;</div>
+          <h3>Procedures</h3>
+          <p>Surgeries, diagnostic procedures, and medical interventions with outcomes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128137;</div>
+          <h3>Immunizations</h3>
+          <p>Vaccination records with series tracking and completion status.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#127973;</div>
+          <h3>Care Team</h3>
+          <p>Doctors, specialists, and healthcare providers with contact details and specialties.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128197;</div>
+          <h3>Visits</h3>
+          <p>Appointment history with provider notes, follow-ups, and visit summaries.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128179;</div>
+          <h3>Insurance</h3>
+          <p>Health insurance policies with group numbers, coverage details, and contacts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128221;</div>
+          <h3>Legal Documents</h3>
+          <p>Power of attorney, living will, advance directives, and appointed contacts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128222;</div>
+          <h3>Contacts</h3>
+          <p>Personal contacts related to your health — family, caregivers, and emergency contacts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#127963;</div>
+          <h3>Facilities</h3>
+          <p>Hospitals, clinics, pharmacies, and labs with addresses and phone numbers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128203;</div>
+          <h3>Reports</h3>
+          <p>Medical reports, imaging results, and clinical documents with attachments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Ready to Get Organized?</h2>
+    <p>Download PHR Health Records and take control of your health information.</p>
+    <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Download on the App Store</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>PHR Health Records</h3>
+        <p>A personal health record app by Evans &amp; Associates PHR, LLC. Your health data, securely on your device.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:evansassocphr@gmail.com">evansassocphr@gmail.com</a></li>
+          <li><a href="support.html">Get Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Evans &amp; Associates PHR, LLC. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
