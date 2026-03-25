@@ -97,21 +97,21 @@ img { max-width: 100%; height: auto; }
 .hero {
   background: linear-gradient(135deg, var(--phr-green) 0%, var(--phr-green-dark) 100%);
   color: white;
-  padding: 80px 24px;
+  padding: 48px 24px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   letter-spacing: -0.5px;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   max-width: 640px;
-  margin: 0 auto 32px;
+  margin: 0 auto 24px;
   opacity: 0.92;
   line-height: 1.6;
 }
@@ -124,7 +124,7 @@ img { max-width: 100%; height: auto; }
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .hero-buttons {
@@ -136,7 +136,7 @@ img { max-width: 100%; height: auto; }
 
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 12px 28px;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
@@ -203,14 +203,14 @@ img { max-width: 100%; height: auto; }
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 14px;
 }
 
 .feature-card {
   background: var(--phr-white);
   border: 1px solid var(--phr-border);
-  border-radius: 12px;
-  padding: 32px 24px;
+  border-radius: 10px;
+  padding: 16px 18px;
   transition: all 0.2s;
 }
 
@@ -219,29 +219,36 @@ img { max-width: 100%; height: auto; }
   transform: translateY(-2px);
 }
 
+.feature-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
 .feature-icon {
-  width: 48px;
-  height: 48px;
+  width: 32px;
+  height: 32px;
   background: var(--phr-green-light);
-  border-radius: 10px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 16px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .feature-card h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 8px;
+  margin-bottom: 0;
   color: var(--phr-green-dark);
 }
 
 .feature-card p {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   color: var(--phr-text-light);
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* ── Screenshots ── */
