@@ -97,21 +97,21 @@ img { max-width: 100%; height: auto; }
 .hero {
   background: linear-gradient(135deg, var(--phr-green) 0%, var(--phr-green-dark) 100%);
   color: white;
-  padding: 48px 24px;
+  padding: 28px 24px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   letter-spacing: -0.5px;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1rem;
   max-width: 640px;
-  margin: 0 auto 24px;
+  margin: 0 auto 16px;
   opacity: 0.92;
   line-height: 1.6;
 }
@@ -173,11 +173,11 @@ img { max-width: 100%; height: auto; }
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 36px 24px;
+  padding: 20px 24px;
 }
 
 .section-title {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--phr-green-dark);
   margin-bottom: 8px;
@@ -186,7 +186,7 @@ img { max-width: 100%; height: auto; }
 .section-subtitle {
   font-size: 1rem;
   color: var(--phr-text-light);
-  margin-bottom: 24px;
+  margin-bottom: 14px;
   max-width: 640px;
 }
 
@@ -315,12 +315,12 @@ img { max-width: 100%; height: auto; }
   background: linear-gradient(135deg, var(--phr-green) 0%, var(--phr-green-dark) 100%);
   color: white;
   text-align: center;
-  padding: 36px 24px;
+  padding: 20px 24px;
 }
 
 .cta-banner h2 {
-  font-size: 2rem;
-  margin-bottom: 12px;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
 }
 
 .cta-banner p {
@@ -333,7 +333,7 @@ img { max-width: 100%; height: auto; }
 .site-footer {
   background: #1A1A1A;
   color: #999;
-  padding: 48px 24px;
+  padding: 24px 24px;
 }
 
 .footer-inner {
@@ -386,8 +386,8 @@ img { max-width: 100%; height: auto; }
 
 .footer-bottom {
   max-width: var(--max-width);
-  margin: 32px auto 0;
-  padding-top: 24px;
+  margin: 16px auto 0;
+  padding-top: 16px;
   border-top: 1px solid #333;
   font-size: 0.8rem;
   text-align: center;
@@ -397,33 +397,33 @@ img { max-width: 100%; height: auto; }
 .page-header {
   background: linear-gradient(135deg, var(--phr-green) 0%, var(--phr-green-dark) 100%);
   color: white;
-  padding: 28px 24px;
+  padding: 14px 24px;
   text-align: center;
 }
 
 .page-header h1 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 
 .page-header p {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   opacity: 0.9;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 
 .content-section {
   max-width: 780px;
   margin: 0 auto;
-  padding: 56px 24px;
+  padding: 20px 24px;
 }
 
 .content-section h2 {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--phr-green-dark);
-  margin-top: 36px;
-  margin-bottom: 12px;
+  margin-top: 20px;
+  margin-bottom: 6px;
 }
 
 .content-section h2:first-child {
@@ -431,17 +431,20 @@ img { max-width: 100%; height: auto; }
 }
 
 .content-section p {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   color: var(--phr-text);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 .content-section ul {
-  margin: 8px 0 16px 20px;
+  margin: 4px 0 8px 20px;
 }
 
 .content-section li {
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   color: var(--phr-text);
+  font-size: 0.9rem;
 }
 
 /* ── Contact Form ── */
@@ -508,9 +511,9 @@ img { max-width: 100%; height: auto; }
 .feature-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: 24px;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .feature-detail:nth-child(even) {
