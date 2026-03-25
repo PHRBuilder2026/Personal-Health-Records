@@ -451,20 +451,21 @@ img { max-width: 100%; height: auto; }
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
+  gap: 24px;
   align-items: start;
 }
 
 .contact-info h3 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--phr-green-dark);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .contact-info p {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   color: var(--phr-text-light);
+  font-size: 0.88rem;
 }
 
 .contact-info a {
@@ -473,21 +474,21 @@ img { max-width: 100%; height: auto; }
 
 .contact-form label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
   color: var(--phr-text);
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px 14px;
+  padding: 8px 10px;
   border: 1px solid var(--phr-border);
-  border-radius: 8px;
-  font-size: 0.95rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
   font-family: inherit;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   transition: border-color 0.2s;
 }
 
