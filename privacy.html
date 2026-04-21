@@ -32,7 +32,7 @@
   <!-- Page Header -->
   <section class="page-header">
     <h1>Privacy Policy</h1>
-    <p>Evans &amp; Associates PHR, LLC — Effective Date: March 19, 2026</p>
+    <p>Evans &amp; Associates PHR, LLC — Effective Date: April 17, 2026</p>
   </section>
 
   <!-- Privacy Content -->
@@ -42,15 +42,35 @@
     <p>PHR stores personal health information you enter, including but not limited to: medical conditions, medications, allergies, vital signs, immunizations, test results, procedures, treatments, insurance details, care team contacts, legal documents, and visit history. This data is stored locally on your device in a SQLite database within the app's sandboxed storage area, inaccessible to other apps. We do not have access to your health data.</p>
 
     <h2>2. On-Device Storage Only</h2>
-    <p>All health data remains on your device at all times. PHR does not upload, sync, or transmit your health records to any server, cloud service, or third party. There is no account creation, no remote database, and no telemetry. Your data exists solely on the device where you enter it.</p>
+    <p>All health data remains on your device at all times. PHR does not upload, sync, or transmit your health records to any server, cloud service, or third party, except for the limited, user-initiated cases described in Section 3. There is no account creation, no remote database, and no telemetry. Your data exists solely on the device where you enter it.</p>
 
     <h2>3. When Data Leaves Your Device</h2>
     <ul>
-      <li><em>Support Requests</em> — You may voluntarily send a support email to Evans &amp; Associates PHR, LLC. This email may include a description of your issue, your name, email address, and optionally a screenshot. Email is encrypted during delivery via TLS. You are prompted to review and consent before sending.</li>
+      <li><em>Support Requests</em> — When you tap Send on a support request, PHR opens your device's email app with a pre-filled message addressed to Evans &amp; Associates PHR, LLC. The message is sent from your own email account — no email credentials leave the PHR app. You review the message and tap Send yourself. If you include health information in the description, that information passes through your email provider and is stored in Gmail on our side.</li>
       <li><em>Backups</em> — You may export a backup of your database to a location you choose (e.g., external drive, iCloud Drive). We do not receive or store your backups.</li>
       <li><em>Medication Lookups</em> — When you use the NIH Lookup or FDA Drug Info features on the Medications screen, your search terms are sent to the National Institutes of Health (clinicaltables.nlm.nih.gov) and the U.S. Food and Drug Administration (api.fda.gov) to retrieve drug names, labels, and interaction data. These are U.S. government public APIs. No personal health records or patient information is transmitted — only the drug name you search for.</li>
       <li><em>Sharing / Printing</em> — You may print or share health reports through your device's built-in sharing features. These actions use your device's native capabilities and do not route through our servers.</li>
+      <li><em>Health Checkup (AI Analysis)</em> — If you run a Health Checkup, PHR sends a de-identified snapshot of the patient record to the AI service you have configured (Claude, OpenAI, or Gemini) using the API key you have entered on this device. The snapshot includes age (as an integer), sex, height, weight, lifestyle notes, and whichever clinical categories you check (conditions, medications, allergies, vitals, lab results, etc.).</li>
     </ul>
+
+    <div class="callout callout-green">
+      <p><strong>No identifying information is sent.</strong></p>
+      <p>Name, date of birth, street address, phone numbers, email addresses, medical record numbers, insurance policy or member numbers, lot numbers, care team names / phones / emails, signatures, and report attachments are never transmitted during a Health Checkup.</p>
+      <p class="callout-note">A confirmation screen appears every time you run a Health Checkup, showing exactly what will be sent before you tap Send.</p>
+    </div>
+
+    <p>Your own free-text questions on the Health Checkup screen are sent to the AI service verbatim and are not scrubbed. Do not type names, phone numbers, addresses, or other identifying details into that field.</p>
+
+    <ul>
+      <li><em>Ask AI</em> — The Ask AI feature sends whatever question you type — plus any attachment you choose to include — to the AI service you have configured, using your API key. PHR does not automatically attach your health record to Ask AI queries; only what you type or attach leaves the device.</li>
+    </ul>
+
+    <div class="callout callout-orange">
+      <p><strong>Ask AI does not strip identifiers.</strong></p>
+      <p>Unlike the Health Checkup, Ask AI sends your question exactly as typed. Any names, dates of birth, addresses, phone numbers, email addresses, or record numbers you include in the question — or in an attached file — will be transmitted to the AI service. Review your question before tapping Send.</p>
+    </div>
+
+    <p>API keys for AI services are stored in the device's encrypted Keychain and are used only to authenticate your own requests. Once data reaches the AI service, it is governed by that service's own terms and privacy policy.</p>
 
     <h2>4. HIPAA Notice</h2>
     <p>PHR is a personal-use application and is not a Covered Entity under HIPAA. It is not intended for use by healthcare providers, insurance companies, or other regulated entities. All records are for your personal reference only.</p>
@@ -63,7 +83,7 @@
 
     <h2>7. Contact</h2>
     <p>Questions about this Privacy Policy may be directed to:</p>
-    <p>Evans &amp; Associates PHR, LLC<br><a href="mailto:evansassocphr@gmail.com">evansassocphr@gmail.com</a></p>
+    <p>Evans &amp; Associates PHR, LLC<br><a href="mailto:Fred@evansassoc-phr.com">Fred@evansassoc-phr.com</a></p>
 
   </section>
 
@@ -85,7 +105,7 @@
       <div class="footer-links">
         <h4>Contact</h4>
         <ul>
-          <li><a href="mailto:evansassocphr@gmail.com">evansassocphr@gmail.com</a></li>
+          <li><a href="mailto:Fred@evansassoc-phr.com">Fred@evansassoc-phr.com</a></li>
           <li><a href="support.html">Get Help</a></li>
         </ul>
       </div>
