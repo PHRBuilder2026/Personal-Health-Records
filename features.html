@@ -24,7 +24,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="features.html" class="active">Features</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="support.html">Support</a></li>
+        <li><a href="support.html">FAQ</a></li>
       </ul>
     </div>
   </nav>
@@ -48,11 +48,38 @@
         <ul class="feature-list">
           <li>Complete personal health profile</li>
           <li>Emergency contact information</li>
-          <li>Multi-country address support (US, Canada, UK, Australia, Germany)</li>
+          <li>Multi-country address support (US, Canada, UK, Australia, and other English-speaking countries)</li>
+          <li>Additional language support coming in future updates</li>
           <li>Privacy controls to blur sensitive fields on screen and exclude them from printed reports</li>
-          <li>Password protection per patient</li>
           <li>Up to 10 patient records per device — designed for personal and family use</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/7_CCDA_Import.png" alt="CCDA Import menu in Settings">
+      </div>
+      <div>
+        <h3>Import from Patient Portals (CCDA)</h3>
+        <p>Most patient portals — MyChart, Athenahealth, Cerner, eClinicalWorks, and others — let you download a Continuity of Care Document (CCDA). PHR reads that file and pulls your data into the right modules, so you don't have to retype anything.</p>
+        <ul class="feature-list">
+          <li>One importer for each section: Lab Results, Medications, Conditions, Allergies, Immunizations, Procedures, Imaging Reports, Patient Info, and Contacts</li>
+          <li>Stage every record before it's imported — review what's coming in and uncheck anything you don't want</li>
+          <li>Automatic LOINC matching for lab results, with reference ranges based on your age and sex</li>
+          <li>Per-batch import history with one-tap rollback if you change your mind</li>
+          <li>Built-in file analyzer shows what's in any CCDA, plus a reference page explaining how to download one from your portal</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/8_CCDA_Catalog.png" alt="CCDA Import Catalog screen">
+      </div>
+      <div>
+        <h3>Know exactly what gets imported</h3>
+        <p>The CCDA Import Catalog shows you, importer by importer, every field PHR pulls in — and what it intentionally skips. The companion Analyze My XML File screen lets you open any CCDA read-only and see what's in it before you commit to importing. No guessing about what made it in or what got dropped.</p>
       </div>
     </div>
 
@@ -92,6 +119,57 @@
 
     <div class="feature-detail">
       <div>
+        <img src="screenshots/12_Questions.png" alt="Questions list with Print report dialog">
+      </div>
+      <div>
+        <h3>Questions for Your Provider</h3>
+        <p>Keep a running list of things you want to ask your doctor or pharmacist. Tap the question icon on any medication, condition, or lab result to start a new question linked to that record. Then print the list before your visit — with or without the answers you've collected — so the conversation stays focused.</p>
+        <ul class="feature-list">
+          <li>Each question is linked to the record it's about, so context is one tap away</li>
+          <li>Status, priority, provider, and linked-visit fields keep larger lists organized</li>
+          <li>Sidebar badge shows how many questions are still open at a glance</li>
+          <li>Print report groups questions by provider and priority, with a one-line-per-question layout</li>
+          <li>Optional Ask AI path drafts a starting answer you can edit, save, and bring to the visit</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/9_Ask_AI.png" alt="Ask AI on the Question screen">
+      </div>
+      <div>
+        <h3>Ask AI</h3>
+        <p>Got a question about a medication, lab result, or condition in your record? Tap Ask AI on the Question screen and PHR sends your question to the AI service you've chosen. Perplexity opens in Safari and doesn't require an account; Claude, OpenAI, and Gemini are sent directly from the app using your own API key (each requires a paid subscription with that vendor — PHR doesn't provide AI service itself).</p>
+        <ul class="feature-list">
+          <li>Pick the AI service you prefer — or turn the feature off entirely</li>
+          <li>Attach a PDF, image, or text file with your question (Claude path)</li>
+          <li>Plain-English warning explains what's leaving the app the first time you use it, and again every time you attach a file</li>
+          <li>Saved answers are stamped with the model and timestamp so you know what produced them</li>
+          <li>Built-in disclaimer reminds you to confirm anything important with a licensed clinician</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/10_Health_Checkup.png" alt="Health Checkup screen">
+      </div>
+      <div>
+        <h3>Health Checkup</h3>
+        <p>Ask an AI to look at your record without giving up your privacy. Health Checkup builds a de-identified snapshot — age, sex, height, weight, plus whichever clinical categories you choose to include — and sends it to the AI service you've configured. The result comes back as a PDF attached to a Health Checkup record so you can save it, print it, or share it.</p>
+        <ul class="feature-list">
+          <li>No name, date of birth, address, phone, email, or record numbers ever leave the device</li>
+          <li>Confirmation screen shows exactly what's about to be sent before you tap Send</li>
+          <li>Optional question field for things you specifically want addressed</li>
+          <li>Past checkups list keeps every run with its date, model, cost, and PDF for reference</li>
+          <li>Use Claude, OpenAI, or Gemini — your own API key, your own subscription</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
         <img src="screenshots/6_Print_Selections.png" alt="Print Selections screen">
       </div>
       <div>
@@ -107,12 +185,62 @@
       </div>
     </div>
 
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/13_Owner_Settings.png" alt="Owner Settings menu">
+      </div>
+      <div>
+        <h3>Owner Tools — Backup, Transfer, and Audit</h3>
+        <p>The Owner of a PHR device gets a set of system tools for keeping the data safe and portable.</p>
+        <ul class="feature-list">
+          <li><strong>Backup</strong> — Save a complete copy of every patient's database and all attachments to a folder you pick. Configure two backup locations and PHR writes to both whenever you back up.</li>
+          <li><strong>Restore</strong> — Pull a backup back in. PHR compares table by table so you can see what's about to change before you commit, and one tap undoes the last restore if you change your mind.</li>
+          <li><strong>Transfer Patient</strong> — Move a single patient's records from one iPad to another via AirDrop or the Files app. Useful when setting up on a new iPad or handing family record-keeping over.</li>
+          <li><strong>Export to Excel</strong> — Hand off your records as an .xlsx file with one worksheet per section, frozen header rows, and matching column titles. Useful when sharing with a clinician who works in spreadsheets.</li>
+          <li><strong>System Log</strong> — A running audit trail of important actions (logins, backups, imports, AI calls). Good for spotting if something unexpected happened.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/14_User_Settings.png" alt="User Settings menu">
+      </div>
+      <div>
+        <h3>For Every User — Help, Reference, and Audit</h3>
+        <p>A few helpers in Settings that every user can reach, regardless of whether they're the Owner.</p>
+        <ul class="feature-list">
+          <li><strong>Setup Guide</strong> — A walk-through for getting started with the app, plus pointers to the backup and import features.</li>
+          <li><strong>Contact Support</strong> — Tap once to open a pre-filled email to support. The message is sent from your own email account, so no credentials leave the app.</li>
+          <li><strong>Support Tickets</strong> — Every support email you send is auto-saved so you can refer back to what you asked.</li>
+          <li><strong>LOINC Reference Table</strong> — Browse the bundled catalog of 678 lab test codes (across 25 panels) used to standardize lab result names. Search by name, code, or panel — handy when comparing reports from different labs.</li>
+          <li><strong>Login Audit</strong> — A history of your own login activity for peace of mind.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="screenshots/11_Apple_Health.png" alt="Apple Health Import screen">
+      </div>
+      <div>
+        <h3>Apple Health Import</h3>
+        <p>If you've been tracking blood pressure, heart rate, or pulse oximetry on your iPhone or Apple Watch, PHR can pull that history straight in. Export your Apple Health data on the iPhone, transfer the file to your iPad, and PHR turns the readings into Vitals records you can review, filter, and report on.</p>
+        <ul class="feature-list">
+          <li>Step-by-step iPhone export instructions built into the screen — print them if you want a checklist to take with you</li>
+          <li>Date range and type filter let you preview what's coming in before anything is saved</li>
+          <li>Duplicate detection means re-importing won't double up your readings</li>
+          <li>Captures Blood Pressure, Heart Rate, and Pulse Oximetry</li>
+        </ul>
+      </div>
+    </div>
+
   </section>
 
   <!-- All Modules Grid -->
   <section class="section section-center" style="background: var(--phr-green-light); max-width: 100%; padding-left: 24px; padding-right: 24px;">
     <div style="max-width: var(--max-width); margin: 0 auto;">
-      <h2 class="section-title">All 16 Health Modules</h2>
+      <h2 class="section-title">All 16 Modules — Plus Print and Attachments</h2>
       <p class="section-subtitle">Everything you need to maintain a complete personal health record.</p>
       <div class="features-grid">
         <!-- Personal -->
@@ -198,8 +326,8 @@
   <!-- CTA -->
   <section class="cta-banner">
     <h2>Ready to Get Organized?</h2>
-    <p>Download PHR Health Records and take control of your health information.</p>
-    <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Download on the App Store</a>
+    <p>Coming soon to the Apple App Store.</p>
+    <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Coming Soon to the App Store</a>
   </section>
 
   <!-- Footer -->
@@ -214,7 +342,7 @@
         <ul>
           <li><a href="features.html">Features</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="support.html">Support</a></li>
+          <li><a href="support.html">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-links">

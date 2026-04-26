@@ -24,18 +24,18 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="features.html">Features</a></li>
         <li><a href="privacy.html">Privacy</a></li>
-        <li><a href="support.html">Support</a></li>
+        <li><a href="support.html">FAQ</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-badge">Available on iPad</div>
-    <h1>Your Health Records,<br>Privately Yours</h1>
-    <p>PHR Health Records keeps your medical information securely stored on your device. No cloud, no accounts, no tracking — just your data, under your control.</p>
+    <div class="hero-badge">Coming Soon for iPad</div>
+    <h1>Your Health Records, Privately Yours</h1>
+    <p>Comprehensive, powerful, and intuitive to use — a personal health record for your iPad. Extensive coverage across 16 connected modules — medications, labs, conditions, providers, insurance, immunizations, and more — paired with modern AI tools for analysis, automatic drug interaction checks, and one-tap imports from your patient portal and Apple Health. No cloud, no accounts — your record stays securely on your device.</p>
     <div class="hero-buttons">
-      <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Download on the App Store</a>
+      <a href="why-phr.html" class="btn btn-primary">Do I Need a PHR?</a>
       <a href="features.html" class="btn btn-outline">See Features</a>
     </div>
   </section>
@@ -44,13 +44,51 @@
   <section class="section section-center">
     <h2 class="section-title">See PHR in Action</h2>
     <p class="section-subtitle">A clean, intuitive interface designed for managing your family's health records.</p>
-    <div class="screenshots-row">
-      <img src="screenshots/1_Patient_Info.png" alt="Patient Information screen">
-      <img src="screenshots/2_Medications.png" alt="Medications screen">
-      <img src="screenshots/3_Lab_Results.png" alt="Lab Results screen">
-      <img src="screenshots/4_Lab_Matrix_Report.png" alt="Lab Results Matrix Report">
-      <img src="screenshots/5_Medication_Checklist.png" alt="Medication Checklist Report">
+    <div class="screenshot-viewer">
+      <button class="viewer-nav viewer-prev" type="button" aria-label="Previous screenshot" onclick="phrViewer(-1)">&#8249;</button>
+      <div class="viewer-stage">
+        <img class="viewer-slide active" src="screenshots/20_Help_Welcome.png" alt="Help — Welcome to PHR">
+        <img class="viewer-slide" src="screenshots/21_Screen_Index.png" alt="Help — Screen Index">
+        <img class="viewer-slide" src="screenshots/22_Help_Context.png" alt="Help — context-sensitive help for a screen">
+        <img class="viewer-slide" src="screenshots/6_Print_Selections.png" alt="Print Selections screen">
+        <img class="viewer-slide" src="screenshots/17_Health_Record_Report.png" alt="Multi-section Health Record Report">
+        <img class="viewer-slide" src="screenshots/18_Medication_Checklist.png" alt="Weekly Medication Checklist">
+        <img class="viewer-slide" src="screenshots/25_Med_By_Condition_Report.png" alt="Medication used for Medical Condition report">
+        <img class="viewer-slide" src="screenshots/13_Owner_Settings.png" alt="Owner Settings menu">
+        <img class="viewer-slide" src="screenshots/14_User_Settings.png" alt="User Settings menu">
+        <img class="viewer-slide" src="screenshots/7_CCDA_Import.png" alt="CCDA Import menu">
+        <img class="viewer-slide" src="screenshots/8_CCDA_Catalog.png" alt="CCDA Import Catalog screen">
+        <img class="viewer-slide" src="screenshots/11_Apple_Health.png" alt="Apple Health Import screen">
+        <img class="viewer-slide" src="screenshots/10_Health_Checkup.png" alt="Health Checkup screen">
+        <img class="viewer-slide" src="screenshots/1_Patient_Info.png" alt="Patient Information screen">
+        <img class="viewer-slide" src="screenshots/12_Questions.png" alt="Questions list with Print report dialog">
+        <img class="viewer-slide" src="screenshots/9_Ask_AI.png" alt="Ask AI on the Question screen">
+        <img class="viewer-slide" src="screenshots/23_Conditions.png" alt="Conditions list">
+        <img class="viewer-slide" src="screenshots/24_Condition_Detail.png" alt="Condition detail screen">
+        <img class="viewer-slide" src="screenshots/2_Medications.png" alt="Medications screen">
+        <img class="viewer-slide" src="screenshots/19_NIH_Drug_Lookup.png" alt="NIH Drug Lookup screen">
+        <img class="viewer-slide" src="screenshots/16_Drug_Interaction.png" alt="Drug Interaction Check sheet">
+        <img class="viewer-slide" src="screenshots/15_Vitals.png" alt="Vitals screen with custom normals">
+        <img class="viewer-slide" src="screenshots/3_Lab_Results.png" alt="Lab Results screen">
+      </div>
+      <button class="viewer-nav viewer-next" type="button" aria-label="Next screenshot" onclick="phrViewer(1)">&#8250;</button>
     </div>
+    <p class="viewer-counter"><span id="viewer-index">1</span> / <span id="viewer-total">5</span></p>
+    <script>
+      (function () {
+        var slides = document.querySelectorAll('.viewer-slide');
+        var idxEl = document.getElementById('viewer-index');
+        var totalEl = document.getElementById('viewer-total');
+        if (totalEl) totalEl.textContent = slides.length;
+        var current = 0;
+        window.phrViewer = function (delta) {
+          slides[current].classList.remove('active');
+          current = (current + delta + slides.length) % slides.length;
+          slides[current].classList.add('active');
+          if (idxEl) idxEl.textContent = current + 1;
+        };
+      })();
+    </script>
   </section>
 
   <!-- Key Features Overview -->
@@ -109,7 +147,7 @@
         <div class="icon">&#128683;</div>
         <div>
           <h3>No Accounts Required</h3>
-          <p>No sign-up, no email, no account creation. Start using PHR the moment you download it.</p>
+          <p>No sign-up, no email, no account creation. Start using PHR the moment it's installed.</p>
         </div>
       </div>
       <div class="privacy-card">
@@ -132,8 +170,8 @@
   <!-- CTA -->
   <section class="cta-banner">
     <h2>Take Control of Your Health Records</h2>
-    <p>Download PHR Health Records today — it's free and completely private.</p>
-    <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Download on the App Store</a>
+    <p>Coming soon to the Apple App Store. Your data stays on your device.</p>
+    <a href="https://apps.apple.com/app/phr-health-records/id6744194498" class="btn btn-primary">Coming Soon to the App Store</a>
   </section>
 
   <!-- Footer -->
@@ -148,7 +186,7 @@
         <ul>
           <li><a href="features.html">Features</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="support.html">Support</a></li>
+          <li><a href="support.html">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-links">

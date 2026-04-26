@@ -24,7 +24,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="features.html">Features</a></li>
         <li><a href="privacy.html" class="active">Privacy</a></li>
-        <li><a href="support.html">Support</a></li>
+        <li><a href="support.html">FAQ</a></li>
       </ul>
     </div>
   </nav>
@@ -49,12 +49,13 @@
     <p>PHR does not have its own login or password. Access to your records is protected by your iPad's lock screen — anyone who can unlock the iPad can open the app. We strongly recommend keeping a passcode enabled in your iPad's Settings, and using Face ID or Touch ID where available. iPadOS also lets you require Face ID, Touch ID, or your passcode to open individual apps; you can enable this for PHR by long-pressing the PHR icon on the Home Screen and choosing <strong>Require Face ID</strong> (or Touch ID). PHR itself does not request biometric data — these protections are managed entirely by iPadOS.</p>
 
     <h2>3. On-Device Storage Only</h2>
-    <p>All health data remains on your device at all times. PHR does not upload, sync, or transmit your health records to any server, cloud service, or third party, except for the limited, user-initiated cases described in Section 3. There is no account creation, no remote database, and no telemetry. Your data exists solely on the device where you enter it.</p>
+    <p>All health data remains on your device at all times. PHR does not upload, sync, or transmit your health records to any server, cloud service, or third party, except for the limited, user-initiated cases described in Section 4. There is no account creation, no remote database, and no telemetry. Your data exists solely on the device where you enter it.</p>
 
     <h2>4. When Data Leaves Your Device</h2>
     <ul>
       <li><em>Support Requests</em> — When you tap Send on a support request, PHR opens your device's email app with a pre-filled message addressed to Evans &amp; Associates PHR, LLC. The message is sent from your own email account — no email credentials leave the PHR app. You review the message and tap Send yourself. If you include health information in the description, that information passes through your email provider and is stored in Gmail on our side.</li>
       <li><em>Backups</em> — You may export a backup of your database to a location you choose (e.g., external drive, iCloud Drive). We do not receive or store your backups.</li>
+      <li><em>Transfer Patient</em> — You may export a single patient's records as a .phrp file to move them to another iPad. The file goes wherever you tell iOS to send it (AirDrop, the Files app, email, etc.). We do not receive or store transferred files.</li>
       <li><em>Medication Lookups</em> — When you use the NIH Lookup or FDA Drug Info features on the Medications screen, your search terms are sent to the National Institutes of Health (clinicaltables.nlm.nih.gov) and the U.S. Food and Drug Administration (api.fda.gov) to retrieve drug names, labels, and interaction data. These are U.S. government public APIs. No personal health records or patient information is transmitted — only the drug name you search for.</li>
       <li><em>Sharing / Printing</em> — You may print or share health reports through your device's built-in sharing features. These actions use your device's native capabilities and do not route through our servers.</li>
       <li><em>Health Checkup (AI Analysis)</em> — If you run a Health Checkup, PHR sends a de-identified snapshot of the patient record to the AI service you have configured (Claude, OpenAI, or Gemini) using the API key you have entered on this device. The snapshot includes age (as an integer), sex, height, weight, lifestyle notes, and whichever clinical categories you check (conditions, medications, allergies, vitals, lab results, etc.).</li>
@@ -69,7 +70,7 @@
     <p>Your own free-text questions on the Health Checkup screen are sent to the AI service verbatim and are not scrubbed. Do not type names, phone numbers, addresses, or other identifying details into that field.</p>
 
     <ul>
-      <li><em>Ask AI</em> — The Ask AI feature sends whatever question you type — plus any attachment you choose to include — to the AI service you have configured, using your API key. PHR does not automatically attach your health record to Ask AI queries; only what you type or attach leaves the device.</li>
+      <li><em>Ask AI</em> — The Ask AI feature sends whatever question you type — plus any attachment you choose to include — to the AI service you have configured. Perplexity opens your question in Safari and does not require an API key or account. Claude, OpenAI, and Gemini are sent directly from the app using your own API key, and each requires a paid subscription with that vendor — PHR does not provide AI service itself. PHR does not automatically attach your health record to Ask AI queries; only what you type or attach leaves the device.</li>
     </ul>
 
     <div class="callout callout-orange">
@@ -106,7 +107,7 @@
         <ul>
           <li><a href="features.html">Features</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="support.html">Support</a></li>
+          <li><a href="support.html">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-links">

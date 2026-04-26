@@ -263,10 +263,74 @@ img { max-width: 100%; height: auto; }
 .screenshots-row img {
   border-radius: 12px;
   box-shadow: var(--phr-shadow-lg);
-  height: 400px;
+  height: 300px;
   width: auto;
   scroll-snap-align: start;
   flex-shrink: 0;
+}
+
+/* ── Single-image screenshot viewer with prev/next arrows ── */
+.screenshot-viewer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 0 8px;
+}
+
+.viewer-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 480px;
+  flex-grow: 0;
+}
+
+.viewer-slide {
+  display: none;
+  border-radius: 12px;
+  box-shadow: var(--phr-shadow-lg);
+  max-height: 480px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
+
+.viewer-slide.active {
+  display: block;
+}
+
+.viewer-nav {
+  background: var(--phr-green);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.1s;
+  flex-shrink: 0;
+}
+
+.viewer-nav:hover {
+  background: var(--phr-green-dark);
+  transform: scale(1.05);
+}
+
+.viewer-nav:active {
+  transform: scale(0.95);
+}
+
+.viewer-counter {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--phr-text-light);
+  margin-top: 8px;
 }
 
 /* ── Privacy Highlights ── */
