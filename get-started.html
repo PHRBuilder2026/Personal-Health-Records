@@ -8,18 +8,20 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .starter-layout {
-      display: flex;
+      display: grid;
+      grid-template-columns: 340px 1fr;
       gap: 28px;
-      align-items: flex-start;
+      align-items: start;
       margin: 18px 0 8px;
     }
-    .starter-left { flex: 0 0 auto; max-width: 100%; }
-    .starter-right { flex: 1 1 0; min-width: 0; }
+    .starter-left { min-width: 0; }
+    .starter-right { min-width: 0; }
     .starter-right > :first-child { margin-top: 0; }
     @media (max-width: 720px) {
-      .starter-layout { flex-direction: column; }
+      .starter-layout { grid-template-columns: 1fr; }
     }
     .starter-table {
+      width: 100%;
       border-collapse: collapse;
       font-size: 0.875rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
