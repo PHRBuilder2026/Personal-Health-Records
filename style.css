@@ -5,6 +5,7 @@
   --phr-green-dark: #236B43;
   --phr-green-light: #E8F5EE;
   --phr-green-accent: #3DA86E;
+  --phr-card-bg: #F1F4F2;
   --phr-text: #333;
   --phr-text-light: #666;
   --phr-bg: #FAFCFB;
@@ -703,25 +704,30 @@ img { max-width: 100%; height: auto; }
 .hero-compact h1 { font-size: 2.3rem; margin-bottom: 8px; }
 .hero-compact p { color: var(--phr-text-light); max-width: 640px; margin: 0 auto; }
 
+/* FI 684: single, left-aligned reading column that mirrors the in-app
+   H03 blog list (stacked cards) instead of the old two-column grid. */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 22px;
-  max-width: var(--max-width);
+  grid-template-columns: 1fr;
+  gap: 16px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 0 24px 48px;
+  text-align: left;
 }
 
+/* FI 684: flat light-grey cards to match the app's H03 cards rather
+   than the white drop-shadow cards used elsewhere on the site. */
 .blog-card {
-  background: var(--phr-white);
+  background: var(--phr-card-bg);
   border: 1px solid var(--phr-border);
   border-radius: 12px;
-  box-shadow: var(--phr-shadow);
+  box-shadow: none;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .blog-card:hover {
   transform: translateY(-2px);
-  box-shadow: var(--phr-shadow-lg);
+  box-shadow: var(--phr-shadow);
 }
 .blog-card-link {
   display: block;
