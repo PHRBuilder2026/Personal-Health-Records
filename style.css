@@ -701,8 +701,15 @@ img { max-width: 100%; height: auto; }
 .hero-compact {
   padding: 56px 24px 36px;
 }
-.hero-compact h1 { font-size: 2.3rem; margin-bottom: 8px; }
-.hero-compact p { color: var(--phr-text-light); max-width: 640px; margin: 0 auto; }
+/* FI 684: the blog hero now uses the descriptive sentence as its only
+   title, at a reasonable size (no oversized "PHR Blog" heading). */
+.hero-compact h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+  max-width: 720px;
+  margin: 0 auto;
+}
 
 /* FI 684: single, left-aligned reading column that mirrors the in-app
    H03 blog list (stacked cards) instead of the old two-column grid. */
@@ -710,7 +717,7 @@ img { max-width: 100%; height: auto; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-  max-width: 720px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 24px 48px;
   text-align: left;
