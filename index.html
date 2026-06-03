@@ -4,8 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PHR Health Records — Your Health Data, On Your Device</title>
-  <meta name="description" content="PHR Health Records is a private, on-device personal health record app for iPad. No cloud, no accounts, no tracking — just your data under your control.">
+  <meta name="description" content="PHR Health Records is a private, on-device personal health record app for iPad. No cloud, no accounts, no in-app tracking — just your data under your control.">
   <link rel="stylesheet" href="style.css">
+  <!-- Google Analytics 4 (FI-583) — replace G-18QZHJX2EM with the real Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-18QZHJX2EM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-18QZHJX2EM');
+  </script>
 </head>
 <body>
 
@@ -159,7 +167,7 @@
         <div class="icon">&#128065;</div>
         <div>
           <h3>No Tracking or Telemetry</h3>
-          <p>Zero analytics, zero usage tracking. We never see your data and have no way to access it.</p>
+          <p>The app sends zero analytics and zero usage data. We never see what's inside your records and have no way to access it.</p>
         </div>
       </div>
       <div class="privacy-card">
