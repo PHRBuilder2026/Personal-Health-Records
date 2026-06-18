@@ -4,8 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Model Railroad Record Keeper</title>
-  <meta name="description" content="Model Railroad Record Keeper — the all-in-one app for running your model railroad on iPad and Mac. Roster, operating jobs, layout, inventory, and more.">
+  <meta name="description" content="Model Railroad Record Keeper — the all-in-one app for running your model railroad on iPad and Mac. Operating jobs, locomotive roster, layout, inventory, to-dos, and reports. Your data stays on your device.">
   <link rel="stylesheet" href="../style.css">
+  <style>
+    :root { --mrr-green: #2E8B57; --mrr-dark: #1A3C2A; --mrr-light: #E8F5E9; }
+    .mrr-hero { text-align: center; padding: 48px 20px 28px; background: linear-gradient(160deg,#EAF6EC,#D2EAD7); }
+    .mrr-hero img.icon { width: 132px; height: 132px; border-radius: 28px; box-shadow: 0 8px 24px rgba(0,0,0,.14); }
+    .mrr-hero h1 { color: var(--mrr-dark); font-size: 2.1rem; margin: 18px 0 6px; }
+    .mrr-hero p.tag { color: var(--mrr-green); font-size: 1.15rem; font-weight: 600; margin: 0 0 22px; }
+    .mrr-store { display:inline-flex; align-items:center; gap:10px; background:#111; color:#fff;
+      text-decoration:none; padding:13px 22px; border-radius:12px; font-weight:600; font-size:1rem; }
+    .mrr-store:hover { background:#000; }
+    .mrr-store small { display:block; font-size:.72rem; font-weight:400; opacity:.8; line-height:1; }
+    .mrr-store .big { font-size:1.05rem; line-height:1.1; }
+    .mrr-sub { color:#5a6b60; font-size:.9rem; margin-top:12px; }
+    .mrr-features { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:14px; }
+    .mrr-feature { background:#fff; border:1px solid #e3ece5; border-radius:14px; padding:18px 20px; }
+    .mrr-feature h3 { color:var(--mrr-green); margin:0 0 6px; font-size:1.05rem; }
+    .mrr-feature p { margin:0; color:#444; font-size:.95rem; }
+    .mrr-shots { display:flex; flex-direction:column; gap:22px; align-items:center; margin-top:14px; }
+    .mrr-shots img { width:100%; max-width:760px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.12); border:1px solid #e3ece5; }
+  </style>
 </head>
 <body>
 
@@ -28,24 +47,50 @@
     </div>
   </nav>
 
-  <!-- Page Header -->
-  <section class="page-header">
+  <!-- Hero -->
+  <section class="mrr-hero">
+    <img class="icon" src="images/icon.png" alt="Model Railroad Record Keeper app icon">
     <h1>Model Railroad Record Keeper</h1>
-    <p>Run your whole model railroad &mdash; on iPad and Mac.</p>
+    <p class="tag">Run your whole model railroad — on iPad and Mac.</p>
+    <a class="mrr-store" href="https://apps.apple.com/app/id6781682822">
+      <span class="big">Download on the App&nbsp;Store</span>
+    </a>
+    <p class="mrr-sub">For iPad and Mac. Everything stays on your device — no account, works offline.</p>
   </section>
 
-  <!-- Intro Section -->
+  <!-- Intro -->
   <section class="content-section">
     <h2>One app for the whole layout</h2>
-    <p>Model Railroad Record Keeper keeps everything about your railroad in one place: operating jobs with step-by-step session instructions, a full locomotive roster (road number, model, manufacturer, DCC/sound, function keys, and photos), your layout's locations and tracks, an inventory of rolling stock and supplies, a to-do list, and a library of reference manuals and links. Print clean reports for any of it.</p>
-    <p>Everything stays on your device &mdash; no account, no cloud, works fully offline. Built-in backup and restore keeps your data safe and easy to move.</p>
+    <p>Model Railroad Record Keeper keeps everything about your railroad in one place: operating jobs with step-by-step session instructions, a full locomotive roster, your layout's locations and tracks, an inventory of rolling stock and supplies, a to-do list, and a library of reference manuals and links. Print clean reports for any of it. No account, no cloud, works fully offline — your railroad lives on your device.</p>
+  </section>
 
-    <h2 style="margin-top: 24px;">Help &amp; info</h2>
-    <p>
-      <a href="support.html">Support &amp; FAQ</a> &nbsp;&middot;&nbsp;
-      <a href="privacy.html">Privacy Policy</a>
-    </p>
-    <p>Questions? Email <a href="mailto:Fred@evansassoc-phr.com">Fred@evansassoc-phr.com</a>.</p>
+  <!-- Features -->
+  <section class="content-section">
+    <h2>What's inside</h2>
+    <div class="mrr-features">
+      <div class="mrr-feature"><h3>Operating Jobs</h3><p>Build a master job list with step-by-step instructions, assigned locomotives, and start/end locations and tracks.</p></div>
+      <div class="mrr-feature"><h3>Locomotive Roster</h3><p>Road number, model, manufacturer, DCC/sound, availability, photos, and the full F1–F28 function-key map for every engine.</p></div>
+      <div class="mrr-feature"><h3>Locations &amp; Tracks</h3><p>Catalog the locations on your layout and the tracks at each one, plus the structures and devices that live there.</p></div>
+      <div class="mrr-feature"><h3>Inventory</h3><p>Rolling stock, structures, electronics, tools, and scenery — with categories, storage locations, value tracking, reorder reminders, and a for-sale flag.</p></div>
+      <div class="mrr-feature"><h3>To-Dos &amp; Reference</h3><p>A task list with priorities and time tracking, plus a library of manuals and reference links — including PDFs kept on your device.</p></div>
+      <div class="mrr-feature"><h3>Reports &amp; Printing</h3><p>Clean, native reports for your roster, job list, locations, and inventory — print over AirPrint or export to PDF.</p></div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="content-section">
+    <h2>A look inside</h2>
+    <div class="mrr-shots">
+      <img src="images/shot1.jpg" alt="Locomotive roster screen">
+      <img src="images/shot2.jpg" alt="App screen">
+      <img src="images/shot3.jpg" alt="App screen">
+    </div>
+  </section>
+
+  <!-- Privacy blurb -->
+  <section class="content-section">
+    <h2>Your data stays yours</h2>
+    <p>There's no account to create and nothing is uploaded to a server. The app works with no internet connection, and built-in backup and restore lets you save and move your data whenever you want. See our <a href="privacy.html">Privacy Policy</a> for the full details.</p>
   </section>
 
   <!-- Footer -->
