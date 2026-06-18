@@ -4,26 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Model Railroad Record Keeper</title>
-  <meta name="description" content="Model Railroad Record Keeper — the all-in-one app for running your model railroad on iPad and Mac. Operating jobs, locomotive roster, layout, inventory, to-dos, and reports. Your data stays on your device.">
+  <meta name="description" content="Model Railroad Record Keeper — the all-in-one app for documenting and organizing your model railroad on iPad and Mac. Operating jobs, locomotive roster, layout, inventory, to-dos, and reports. Your data stays on your device.">
   <link rel="stylesheet" href="../style.css">
   <style>
-    :root { --mrr-green: #2E8B57; --mrr-dark: #1A3C2A; --mrr-light: #E8F5E9; }
-    .mrr-hero { text-align: center; padding: 48px 20px 28px; background: linear-gradient(160deg,#EAF6EC,#D2EAD7); }
-    .mrr-hero img.icon { width: 132px; height: 132px; border-radius: 28px; box-shadow: 0 8px 24px rgba(0,0,0,.14); }
-    .mrr-hero h1 { color: var(--mrr-dark); font-size: 2.1rem; margin: 18px 0 6px; }
-    .mrr-hero p.tag { color: var(--mrr-green); font-size: 1.15rem; font-weight: 600; margin: 0 0 22px; }
-    .mrr-store { display:inline-flex; align-items:center; gap:10px; background:#111; color:#fff;
-      text-decoration:none; padding:13px 22px; border-radius:12px; font-weight:600; font-size:1rem; }
-    .mrr-store:hover { background:#000; }
-    .mrr-store small { display:block; font-size:.72rem; font-weight:400; opacity:.8; line-height:1; }
+    :root { --mrr-green: #2E8B57; --mrr-dark: #1A3C2A; }
+    .mrr-hero { display:flex; align-items:center; justify-content:center; gap:36px; flex-wrap:wrap;
+      text-align:left; padding:52px 24px; background:linear-gradient(160deg,#EAF6EC,#D2EAD7); }
+    .mrr-hero img.icon { width:200px; height:200px; border-radius:42px; flex:0 0 auto;
+      box-shadow:0 10px 28px rgba(0,0,0,.16); }
+    .mrr-hero-text { max-width:540px; }
+    .mrr-hero-text h1 { color:var(--mrr-dark); font-size:2.2rem; margin:0 0 8px; }
+    .mrr-hero-text p.tag { color:var(--mrr-green); font-size:1.2rem; font-weight:600; margin:0 0 20px; }
+    .mrr-store { display:inline-flex; align-items:center; background:#111; color:#fff;
+      text-decoration:none; padding:13px 22px; border-radius:12px; font-weight:600; }
     .mrr-store .big { font-size:1.05rem; line-height:1.1; }
+    .mrr-store.mrr-soon { background:#4a4a4a; cursor:default; }
     .mrr-sub { color:#5a6b60; font-size:.9rem; margin-top:12px; }
-    .mrr-features { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:14px; }
-    .mrr-feature { background:#fff; border:1px solid #e3ece5; border-radius:14px; padding:18px 20px; }
-    .mrr-feature h3 { color:var(--mrr-green); margin:0 0 6px; font-size:1.05rem; }
-    .mrr-feature p { margin:0; color:#444; font-size:.95rem; }
-    .mrr-shots { display:flex; flex-direction:column; gap:22px; align-items:center; margin-top:14px; }
-    .mrr-shots img { width:100%; max-width:760px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.12); border:1px solid #e3ece5; }
+    @media (max-width:640px){ .mrr-hero { text-align:center; } .mrr-hero img.icon { width:150px; height:150px; } }
   </style>
 </head>
 <body>
@@ -47,44 +44,75 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero: icon on the left, text on the right -->
   <section class="mrr-hero">
     <img class="icon" src="images/icon.png" alt="Model Railroad Record Keeper app icon">
-    <h1>Model Railroad Record Keeper</h1>
-    <p class="tag">Run your whole model railroad — on iPad and Mac.</p>
-    <a class="mrr-store" href="https://apps.apple.com/app/id6781682822">
-      <span class="big">Download on the App&nbsp;Store</span>
-    </a>
-    <p class="mrr-sub">For iPad and Mac. Everything stays on your device — no account, works offline.</p>
+    <div class="mrr-hero-text">
+      <h1>Model Railroad Record Keeper</h1>
+      <p class="tag">Document and organize your entire model railroad — on iPad and Mac.</p>
+      <!-- When the app is approved, swap this badge for the live link:
+           <a class="mrr-store" href="https://apps.apple.com/app/id6781682822"><span class="big">Download on the App&nbsp;Store</span></a> -->
+      <span class="mrr-store mrr-soon"><span class="big">Coming Soon to the App&nbsp;Store</span></span>
+      <p class="mrr-sub">Launching soon for iPad and Mac. Everything stays on your device — no account, works offline.</p>
+    </div>
   </section>
 
   <!-- Intro -->
   <section class="content-section">
     <h2>One app for the whole layout</h2>
-    <p>Model Railroad Record Keeper keeps everything about your railroad in one place: operating jobs with step-by-step session instructions, a full locomotive roster, your layout's locations and tracks, an inventory of rolling stock and supplies, a to-do list, and a library of reference manuals and links. Print clean reports for any of it. No account, no cloud, works fully offline — your railroad lives on your device.</p>
+    <p>Model Railroad Record Keeper keeps everything about your railroad in one place — operating jobs, a full locomotive roster, your layout's locations and tracks, inventory, to-dos, and a library of reference manuals. Print clean reports for any of it. No account, no cloud, works fully offline: your railroad lives on your device.</p>
   </section>
 
-  <!-- Features -->
-  <section class="content-section">
-    <h2>What's inside</h2>
-    <div class="mrr-features">
-      <div class="mrr-feature"><h3>Operating Jobs</h3><p>Build a master job list with step-by-step instructions, assigned locomotives, and start/end locations and tracks.</p></div>
-      <div class="mrr-feature"><h3>Locomotive Roster</h3><p>Road number, model, manufacturer, DCC/sound, availability, photos, and the full F1–F28 function-key map for every engine.</p></div>
-      <div class="mrr-feature"><h3>Locations &amp; Tracks</h3><p>Catalog the locations on your layout and the tracks at each one, plus the structures and devices that live there.</p></div>
-      <div class="mrr-feature"><h3>Inventory</h3><p>Rolling stock, structures, electronics, tools, and scenery — with categories, storage locations, value tracking, reorder reminders, and a for-sale flag.</p></div>
-      <div class="mrr-feature"><h3>To-Dos &amp; Reference</h3><p>A task list with priorities and time tracking, plus a library of manuals and reference links — including PDFs kept on your device.</p></div>
-      <div class="mrr-feature"><h3>Reports &amp; Printing</h3><p>Clean, native reports for your roster, job list, locations, and inventory — print over AirPrint or export to PDF.</p></div>
-    </div>
-  </section>
+  <!-- Alternating feature highlights (image + text, auto-alternating like PHR) -->
+  <section class="section">
 
-  <!-- Screenshots -->
-  <section class="content-section">
-    <h2>A look inside</h2>
-    <div class="mrr-shots">
-      <img src="images/shot1.jpg" alt="Locomotive roster screen">
-      <img src="images/shot2.jpg" alt="App screen">
-      <img src="images/shot3.jpg" alt="App screen">
+    <div class="feature-detail">
+      <div>
+        <img src="images/shot1.jpg" alt="Locomotive roster screen">
+      </div>
+      <div>
+        <h3>Your Locomotive Roster</h3>
+        <p>Every engine on your railroad at a glance — searchable, sortable, and printable.</p>
+        <ul class="feature-list">
+          <li>Road number, model, manufacturer, DCC or DC, sound, and availability</li>
+          <li>The full F1–F28 function-key map and a photo for every locomotive</li>
+          <li>Build operating jobs with step-by-step instructions and assigned engines</li>
+          <li>Filter, sort, and print your roster and master job list</li>
+        </ul>
+      </div>
     </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="images/shot2.jpg" alt="Locations list screen">
+      </div>
+      <div>
+        <h3>Map Your Whole Layout</h3>
+        <p>Organize the railroad the way you actually operate it — every location with its tracks, buildings, and devices.</p>
+        <ul class="feature-list">
+          <li>Locations with their tracks, structures, and on-site devices</li>
+          <li>A full inventory of rolling stock, structures, electronics, tools, and scenery</li>
+          <li>Storage locations, value tracking, reorder reminders, and a for-sale flag</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature-detail">
+      <div>
+        <img src="images/shot3.jpg" alt="Reference library of manuals and links">
+      </div>
+      <div>
+        <h3>Reference, To-Dos &amp; Reports</h3>
+        <p>Keep the paperwork and the next-steps right where you need them.</p>
+        <ul class="feature-list">
+          <li>Manuals, wiring diagrams, and reference links — including PDFs kept on your device</li>
+          <li>A to-do list with priorities, categories, and start/finish time tracking</li>
+          <li>Clean, native reports for any section — print over AirPrint or export to PDF</li>
+          <li>Built-in backup &amp; restore, so your data is always safe and portable</li>
+        </ul>
+      </div>
+    </div>
+
   </section>
 
   <!-- Privacy blurb -->
