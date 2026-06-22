@@ -74,7 +74,7 @@
         <h3>Import from Patient Portals (CCDA)</h3>
         <p>Most patient portals — MyChart, Athenahealth, Cerner, eClinicalWorks, and others — let you download a Continuity of Care Document (CCDA). PHR reads that file and pulls your data into the right modules, so you don't have to retype anything.</p>
         <ul class="feature-list">
-          <li>One importer for each section: Lab Results, Medications, Conditions, Allergies, Immunizations, Procedures, Imaging Reports, Patient Info, and Contacts</li>
+          <li>One importer for each section: Lab Results, Medications, Conditions, Allergies, Immunizations, Procedures, Implants, Imaging Reports, Patient Info, and Contacts</li>
           <li>Stage every record before it's imported — review what's coming in and uncheck anything you don't want</li>
           <li>Automatic LOINC matching for lab results</li>
           <li>Per-batch import history with one-tap rollback if you change your mind</li>
@@ -236,12 +236,13 @@
       </div>
       <div>
         <h3>Apple Health Import</h3>
-        <p>If you've been tracking blood pressure, heart rate, pulse oximetry, or weight on your iPhone or Apple Watch, PHR can pull that history straight in. Export your Apple Health data on the iPhone, transfer the file to your iPad, and PHR turns the readings into Vitals records you can review, filter, and report on.</p>
+        <p>PHR can pull your records straight out of Apple Health. Choose Apple Health as the source on an import screen, and PHR reads the data your iPhone has gathered from your providers and devices — staging everything for your review before a single record is saved.</p>
         <ul class="feature-list">
+          <li>Brings in clinical records from your providers — lab results, conditions, medications, allergies, immunizations, and procedures</li>
+          <li>Also captures health metrics you track yourself — blood pressure, heart rate, pulse oximetry, and weight — as Vitals</li>
           <li>Step-by-step iPhone export instructions built into the screen — print them if you want a checklist to take with you</li>
-          <li>Date range and type filter let you preview what's coming in before anything is saved</li>
-          <li>Duplicate detection means re-importing won't double up your readings</li>
-          <li>Captures Blood Pressure, Heart Rate, Pulse Oximetry, and Weight</li>
+          <li>Stage and preview everything before anything is saved</li>
+          <li>Duplicate detection means re-importing won't double up records you already have</li>
         </ul>
       </div>
     </div>
@@ -284,6 +285,10 @@
           <div class="feature-card-header"><div class="feature-icon">&#128147;</div><h3>Vitals</h3></div>
           <p>Blood pressure, heart rate, weight, temperature, and other vital signs over time.</p>
         </div>
+        <div class="feature-card">
+          <div class="feature-card-header"><div class="feature-icon">&#127968;</div><h3>Home Monitoring</h3></div>
+          <p>Dedicated blood pressure, glucose, and sleep trackers for the readings you take at home — with quick entry and Apple Health import.</p>
+        </div>
         <!-- Records -->
         <div class="feature-card">
           <div class="feature-card-header"><div class="feature-icon">&#129657;</div><h3>Treatments</h3></div>
@@ -292,6 +297,10 @@
         <div class="feature-card">
           <div class="feature-card-header"><div class="feature-icon">&#9986;&#65039;</div><h3>Procedures</h3></div>
           <p>Surgeries, diagnostic procedures, and medical interventions with outcomes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-header"><div class="feature-icon">&#128297;</div><h3>Implants</h3></div>
+          <p>Pacemakers, joint replacements, stents, and other implanted devices with body site, side, and status.</p>
         </div>
         <div class="feature-card">
           <div class="feature-card-header"><div class="feature-icon">&#128137;</div><h3>Immunizations</h3></div>
