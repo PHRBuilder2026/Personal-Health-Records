@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JMRI &amp; Record Keeper — Model Railroad Record Keeper</title>
+  <meta name="description" content="How Model Railroad Record Keeper fits alongside JMRI. JMRI controls your railroad — Record Keeper documents it: rosters, inventory, manuals, and operating session paperwork on your iPad.">
+  <link rel="stylesheet" href="../style.css">
+  <!-- Google Analytics 4 (FI-583) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-18QZHJX2EM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-18QZHJX2EM');
+  </script>
+  <style>
+    .jmri-table { width:100%; border-collapse:collapse; margin:10px 0 6px; font-size:.97rem; }
+    .jmri-table th, .jmri-table td { padding:10px 12px; text-align:left; border-bottom:1px solid #d8eadc; }
+    .jmri-table thead th { color:#1A3C2A; border-bottom:2px solid #2E8B57; }
+    .jmri-table th:first-child { width:44%; }
+    .jmri-table tbody tr:nth-child(even) { background:#f4faf5; }
+    .jmri-list { list-style:none; margin:0; padding:0; }
+    .jmri-list li { position:relative; padding:7px 0 7px 30px; line-height:1.5; }
+    .jmri-list li::before { content:"\2713"; position:absolute; left:0; top:7px; color:#2E8B57; font-weight:800; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+          <text x="16" y="21" font-size="11" font-weight="700" fill="white" text-anchor="middle" font-family="-apple-system, Helvetica, Arial, sans-serif">MRR</text>
+        </svg>
+        Model Railroad Record Keeper
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jmri.html" class="active">JMRI</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>JMRI runs your railroad. Record Keeper remembers it.</h1>
+  </section>
+
+  <!-- Lead -->
+  <section class="content-section">
+    <h2>Two apps, two different jobs</h2>
+    <p>If you're already running JMRI, keep running it &mdash; Model Railroad Record Keeper isn't a replacement, and it doesn't try to be. JMRI controls your railroad. Record Keeper documents it. Most JMRI layouts we've seen also have a three-ring binder, a shoebox of receipts, and four spreadsheets that haven't matched each other since 2019. That's the job Record Keeper takes over.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>What JMRI does (and does well)</h2>
+    <p>JMRI is free, open-source software that's been the hobby's standard for computer control for over two decades. DecoderPro programs your DCC decoders and manages a roster. PanelPro builds control panels that throw real turnouts. OperationsPro builds trains and prints manifests and switch lists. WiThrottle turns your phone into a throttle. It talks to more than twenty DCC systems, and it costs nothing.</p>
+    <p>The trade-off is what JMRI asks of you: a computer connected to your layout, a Java installation, and a real learning curve. It's control software &mdash; it's deepest where the wires are.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>What Record Keeper does</h2>
+    <p>Record Keeper is a $9.99 iPad app with no computer, no Java, no connection to the layout, and nothing to configure. It keeps the records JMRI doesn't:</p>
+    <ul class="jmri-list">
+      <li><strong>A full equipment roster with the paperwork side</strong> &mdash; what you paid, what it's worth now, condition, where it's stored, when it was last serviced, and a photo. Locomotives carry their DCC details too: address, decoder, function keys, and the CVs you've changed &mdash; so what you programmed in DecoderPro is written down somewhere you can find at the workbench.</li>
+      <li><strong>Your JMRI roster comes with you</strong> &mdash; Record Keeper imports locomotives and cars from JMRI CSV files, so an established roster moves over without retyping.</li>
+      <li><strong>Hobby inventory beyond the rails</strong> &mdash; track, electronics, structures, tools, scenery &mdash; with quantities, values, and a warning when you're running low.</li>
+      <li><strong>A reference library</strong> &mdash; manuals as attached PDFs, saved links, and notes, all offline on the iPad.</li>
+      <li><strong>A project to-do list</strong> built for layout work, with time tracking.</li>
+      <li><strong>Operating session paperwork</strong> &mdash; jobs with steps and dependencies, a dispatch board for running a session with real people, engineer assignments, and printed job cards, car cards, and schedules. Twenty-five-plus reports print from the iPad or export as PDFs.</li>
+    </ul>
+    <p>Everything lives on your iPad &mdash; no cloud, no account, no data collected.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Where they overlap &mdash; honestly</h2>
+    <p>OperationsPro and Record Keeper both handle operating sessions, differently. OperationsPro simulates car forwarding: it decides which cars move and generates the paperwork. Record Keeper is the dispatcher's clipboard: you define the jobs, and it manages the session &mdash; who's ready, who's running, which tracks are locked, which engineer has which train. If you love OperationsPro's automated car routing, keep it. If you've found it more railroad than you wanted to configure, Record Keeper's approach may fit better.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>At a glance</h2>
+    <table class="jmri-table">
+      <thead>
+        <tr><th></th><th>JMRI</th><th>Record Keeper</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Runs trains, programs decoders</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Needs a computer wired to the layout</td><td>Yes</td><td>No &mdash; iPad, nothing to connect</td></tr>
+        <tr><td>Purchase, value &amp; condition records</td><td>No</td><td>Yes</td></tr>
+        <tr><td>Hobby inventory &amp; manuals library</td><td>No</td><td>Yes</td></tr>
+        <tr><td>Session paperwork &amp; dispatch board</td><td>Automated (OperationsPro)</td><td>Human-run, printed cards</td></tr>
+        <tr><td>Price</td><td>Free</td><td>$9.99 once</td></tr>
+      </tbody>
+    </table>
+    <p>Use both. JMRI at the command station; the iPad everywhere else.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Model Railroad Record Keeper</h3>
+        <p>An app for model railroaders by Evans &amp; Associates PHR, LLC. Your railroad, organized on your device.</p>
+      </div>
+      <div class="footer-links">
+        <h4>App</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="support.html">Get Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Evans &amp; Associates PHR, LLC. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
