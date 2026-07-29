@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How an Operating Session Decides Which Jobs Are Ready — MRR Blog</title>
+  <meta name="description" content="When you start an operating session, every job goes back to square one and the board sorts the cards into four columns — Unavailable, Available, Running, and Finished. What decides where a job lands isn&#39;t you shuffling cards all night. It&#39;s the rules you set on each job ahead of time.">
+  <meta property="og:title" content="How an Operating Session Decides Which Jobs Are Ready">
+  <meta property="og:description" content="When you start an operating session, every job goes back to square one and the board sorts the cards into four columns — Unavailable, Available, Running, and Finished. What decides where a job lands isn&#39;t you shuffling cards all night. It&#39;s the rules you set on each job ahead of time.">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-07-27">
+  <link rel="stylesheet" href="../../style.css">
+<!-- Google Analytics 4 (FI-583) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18QZHJX2EM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18QZHJX2EM');
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+        <text x="16" y="21" font-size="11" font-weight="700" fill="white" text-anchor="middle" font-family="-apple-system, Helvetica, Arial, sans-serif">MRR</text>
+      </svg>
+      Model Railroad Record Keeper
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../support.html">Support</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="blog-post">
+  <header class="blog-post-header">
+    <p class="blog-meta">07/27/2026 </p>
+    <h1>How an Operating Session Decides Which Jobs Are Ready</h1>
+  </header>
+
+
+
+  <div class="blog-post-body">
+<h2>Your session is really a set of if-then rules</h2>
+
+<p>When you start an operating session, every job goes back to square one and the board sorts the cards into four columns — Unavailable, Available, Running, and Finished. What decides where a job lands isn&#39;t you shuffling cards all night. It&#39;s the rules you set on each job ahead of time.</p>
+
+<h3>Telling a job when it&#39;s ready</h3>
+
+<p>Each job can carry an &quot;Available When&quot; rule — one or more conditions joined by either <em>all of these</em> or <em>any of these</em>. A condition watches the rest of the board and waits for something to become true:</p>
+
+<ul>
+  <li>another job has finished this session</li>
+  <li>another job is running right now</li>
+  <li>another job is <em>not</em> running</li>
+  <li>a track is free</li>
+  <li>a track is held</li>
+</ul>
+
+<p>Leave the rule blank and the job simply uses its Available switch to decide whether it starts the session ready or waiting.</p>
+
+<h3>A job follows its rule only until it runs</h3>
+
+<p>Before a job has run, its &quot;Available When&quot; rule is live — the board keeps re-checking it and slides the card between Unavailable and Available as conditions change. But the first time you run that job, the rule switches off for the rest of the session. From then on the card holds its place, and only two things can move it: starting it again, or a finish action from another job.</p>
+
+<p>That&#39;s deliberate. Take an out-and-back turn: the outbound leg becomes available, you run it, and when it finishes its finish action flips the return leg to Available. Because the outbound job&#39;s rule has gone quiet, the leg stays parked in Finished instead of springing back to Available the moment its conditions happen to line up again.</p>
+
+<h3>Finish actions: one job cueing the next</h3>
+
+<p>A finish action is a short list attached to a job that fires when that job wraps up. Each entry sets another job — or the finishing job itself — to Available or Unavailable. It&#39;s how you cue the next crew: finish the local, and the yard job it feeds suddenly shows up as ready. The one guardrail is that a finish action never pulls a job that&#39;s currently running, so nothing gets snatched out from under an operator mid-move.</p>
+
+<h3>Keeping the floor sane</h3>
+
+<p>The board also holds two limits: how many jobs may run at once, and a smaller cap on how many of those can be WiFi throttles. Set them to match your crew and your gear, and the board won&#39;t hand out more work than the room can actually run.</p>
+  </div>
+
+  <p class="blog-post-back"><a href="index.html">&larr; All posts</a></p>
+</article>
+
+<footer class="site-footer">
+  <p>Model Railroad Record Keeper &nbsp;·&nbsp; Evans &amp; Associates PHR, LLC</p>
+</footer>
+
+</body>
+</html>
