@@ -41,32 +41,30 @@
   <!-- Page Header -->
   <section class="page-header">
     <h1>Privacy Policy</h1>
-    <p>Model Railroad Record Keeper &mdash; last updated September 6, 2026</p>
+    <p>Model Railroad Record Keeper &mdash; last updated June 18, 2026</p>
   </section>
 
   <!-- Policy Section -->
   <section class="content-section">
-    <p>Model Railroad Record Keeper is developed by Evans &amp; Associates PHR, LLC ("we," "us"). It comes in two versions: the app from the App Store, and the browser version you install from the web. This policy covers both. The short version: <strong>neither one collects, transmits, or shares any of your data.</strong></p>
+    <p>Model Railroad Record Keeper is developed by Evans &amp; Associates PHR, LLC ("we," "us"). This policy explains how the app handles your information. The short version: <strong>Model Railroad Record Keeper does not collect, transmit, or share any of your data.</strong></p>
 
-    <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Where your data is kept</h3>
-    <p>Everything you enter &mdash; your locomotive roster, operating jobs, locations, inventory, to-dos, reference links, photos, and PDFs &mdash; stays on the machine you entered it on. We do not operate a server, we do not have accounts, and none of it is sent to us or to anyone else.</p>
-    <p>In the App Store version it is stored on your device like any other app’s data. In the browser version it is kept in a private storage area your browser sets aside for this site. It never leaves your machine, but it is the browser’s storage: clearing the site’s data removes it, and a browser short on space is entitled to reclaim it. No browser promises to keep it forever. That is why the backups below matter more in the browser version than they do in the App Store one.</p>
+    <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Your data stays on your device</h3>
+    <p>Everything you enter into the app &mdash; your locomotive roster, operating jobs, locations, inventory, to-dos, reference links, photos, and PDFs &mdash; is stored locally on your device. We do not operate a server, we do not have accounts, and none of your data is sent to us or to any third party.</p>
 
     <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">No analytics, no tracking, no advertising</h3>
-    <p>Neither version of the app includes analytics, advertising, or any tracking technology. This website uses Google Analytics to count visits to its pages &mdash; that is the website, not the app, and it sees nothing you enter into either version.</p>
+    <p>The app does not include analytics, advertising, or any tracking technology. We do not track you across apps or websites.</p>
 
     <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Backups are under your control</h3>
-    <p>Both versions export a backup file and let you choose where it goes. We never see these files; they are written by your machine, onto your machine. Restoring a backup reads a file you select.</p>
-    <p>In the App Store version you pick a destination your device offers, such as iCloud Drive, and your device’s own system backups may also include the app’s data &mdash; governed by Apple’s privacy policy, not ours. In the browser version you can nominate folders for the app to write backups into, or take a plain download to wherever your browser puts files.</p>
+    <p>The app can export a backup file that you choose where to save (for example, to the Files app or iCloud Drive). We never see these files. Restoring a backup reads a file you select. Your device's own system backups (iCloud or computer backups) may also include the app's data, governed by Apple's privacy policy, not ours.</p>
 
     <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Photos and camera</h3>
-    <p>If you attach a photo to a record, the app stores that image with the record and nowhere else. On a tablet you will be offered the camera; on a desktop, a file picker. Photos are not uploaded anywhere.</p>
+    <p>If you add a photo to a locomotive, the app uses your device's camera or photo library only to attach that image, which is then stored locally in the app. Photos are not uploaded anywhere.</p>
 
-    <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Reference links</h3>
-    <p>The App Store version includes a built-in browser for finding and saving reference links for your models. In the browser version, saved links open in a new tab of the browser you are already using. Either way you are dealing with those websites directly, under their own privacy policies, and the app neither records nor transmits your browsing activity.</p>
+    <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Reference web browser</h3>
+    <p>The app includes a built-in browser so you can find and save reference links for your models. When you browse the web in this feature, you are interacting directly with those websites, which have their own privacy policies. The app does not record or transmit your browsing activity.</p>
 
     <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Contacting support</h3>
-    <p>If you use the in-app Contact Support feature, the app opens your email program with a message addressed to us. An email is sent only if you choose to send it, from your own email account, and will include whatever you write plus basic context (such as the screen you were on). We use that email solely to respond to you.</p>
+    <p>If you use the in-app Contact Support feature, the app opens your device's email composer with a message addressed to us. An email is sent only if you choose to send it, from your own email account, and will include whatever you write plus basic context (such as the screen you were on). We use that email solely to respond to you.</p>
 
     <h3 style="font-size: 0.95rem; font-weight: 600; color: var(--phr-green-dark); margin-top: 16px; margin-bottom: 4px;">Children's privacy</h3>
     <p>The app does not knowingly collect any personal information from anyone, including children.</p>
