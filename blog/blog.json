@@ -1,6 +1,21 @@
 {
-  "generated_at" : "2026-10-23T11:54:13Z",
+  "generated_at" : "2026-10-23T11:54:23Z",
   "posts" : [
+    {
+      "app" : "PHR",
+      "body" : "## Current Models, No Extra Work\n\nAI companies retire and replace their models often, and some of the ones PHR used were getting old. PHR 2.4 switches every AI service to its current models, updates the setup steps, and takes care of the change for you.\n\n### What changed\n\n- **New defaults for every service.** Google Gemini 3.5 Flash-Lite, Claude Haiku 5.5, GPT-6 Luna, and Grok 4.3. If you were using an older model, PHR moves you to its replacement automatically. For Claude, that's about ten times cheaper.\n- **Healthcare Mode uses Claude Opus 5.5.**\n- **More accurate cost estimates.** The cost shown on each AI answer now matches each company's current prices.\n\n### The free option got easier to set up\n\nGoogle's free tier on its Gemini models is still the easiest way to try Ask AI at no cost. Google changed its sign-up steps, so PHR's directions now match: sign in at aistudio.google.com with a personal Google account, accept the terms, and choose **Create API key**. Paste it into Settings → Owner → AI Service Setup and you're answering questions in minutes.\n\nFor more on the free option, see [Unleash the Power of AI — For Free](unleash-the-power-of-ai-for-free.html).\n",
+      "body_plain" : "Current Models, No Extra Work\n\nAI companies retire and replace their models often, and some of the ones PHR used were getting old. PHR 2.4 switches every AI service to its current models, updates the setup steps, and takes care of the change for you.\n\n### What changed\n\n- New defaults for every service. Google Gemini 3.5 Flash-Lite, Claude Haiku 5.5, GPT-6 Luna, and Grok 4.3. If you were using an older model, PHR moves you to its replacement automatically. For Claude, that's about ten times cheaper.\n- Healthcare Mode uses Claude Opus 5.5.\n- More accurate cost estimates. The cost shown on each AI answer now matches each company's current prices.\n\n### The free option got easier to set up\n\nGoogle's free tier on its Gemini models is still the easiest way to try Ask AI at no cost. Google changed its sign-up steps, so PHR's directions now match: sign in at aistudio.google.com with a personal Google account, accept the terms, and choose Create API key. Paste it into Settings → Owner → AI Service Setup and you're answering questions in minutes.\n\nFor more on the free option, see Unleash the Power of AI — For Free.",
+      "date_published" : "2026-10-23",
+      "excerpt" : "AI companies retire and replace their models often, and some of the ones PHR used were getting old. PHR 2.4 switches every AI service to its current models, updates the setup steps, and takes care of the change for you.",
+      "id" : 20,
+      "important" : false,
+      "published_at" : "2026-10-23T11:54:23Z",
+      "slug" : "ask-ai-update-new-models-easier-gemini-setup",
+      "title" : "Ask AI Gets an Update: New Models and Easier Gemini Setup",
+      "updated_at" : "2026-10-23T11:54:23Z",
+      "url" : "https://evansassoc-phr.com/blog/ask-ai-update-new-models-easier-gemini-setup.html",
+      "uuid" : "EDA7F594-7781-4F10-9C36-91EF116F0450"
+    },
     {
       "app" : "PHR",
       "body" : "## Your Medication History, Kept Intact\n\nWhen a medication ends, the record of it shouldn't disappear. PHR 2.4 adds a Discontinue button that marks a medication stopped and keeps its history, a one-step way to restart it, and a few changes that make your medication list match how you actually take things.\n\n### Discontinue instead of delete\n\nOpen an active medication and you'll see a **Discontinue** button. It fills in today as the end date and asks why you stopped. The choices are Finished, Bad Reaction, Side Effects, Doctor Changed It, Switched Meds, Cost, or Other. Save, and the medication stays in your records, marked as stopped, so you can still see when you took it and why it ended.\n\nIf you choose **Bad Reaction**, PHR offers to add the medication to your Allergies list, so the next provider who looks will see it.\n\nDelete is still there for a medication you entered by mistake. If you try to delete one that's active, PHR asks whether you meant to discontinue it instead.\n\n### Restarting a medication\n\nBack on something you'd stopped? Open it and tap **Restart**. It goes back to Active with today as the new start date, and PHR adds a dated note recording the old stop date and reason. Nothing from the first time around is lost.\n\n### Doses that match real life\n\n- **A different amount at each time of day.** If you take 2 in the morning and 1 at night, set it that way. Each dose shows as its own pill, like \"8 AM × 2\" and \"8 PM × 1\", and the Weekly Medication Checklist and By Time of Day report follow along.\n- **Total per day.** A new field shows how much you take in a day, like \"20 MEQ\", and you can add it as a column in your custom views.\n\n### Your list, your order\n\n- **Put medications in your own order.** Place one at the top, at the bottom, or after another, and the numbers renumber themselves. Select the **Sort** column on the Medications list to see them that way.\n- **Star the main condition.** When a medication treats more than one condition, star the one that matters most.\n- **Your pharmacy, one tap away.** If your pharmacy is in Facilities, its phone number shows on the medication, and tapping its name opens its details.\n\n### Where to find it\n\nUpdate to PHR 2.4 and open any medication. The **?** button in the upper-right of the screen explains each field if you want the full tour.\n",
@@ -12,7 +27,7 @@
       "published_at" : "2026-10-23T11:54:13Z",
       "slug" : "stop-restart-keep-history-medications",
       "title" : "Stop, Restart, and Keep the History: Medications in PHR 2.4",
-      "updated_at" : "2026-10-23T11:54:13Z",
+      "updated_at" : "2026-10-23T11:54:15Z",
       "url" : "https://evansassoc-phr.com/blog/stop-restart-keep-history-medications.html",
       "uuid" : "73081088-9098-4BA1-9F95-B8F769D212DB"
     },
