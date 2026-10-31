@@ -91,6 +91,12 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-18QZHJX2EM');
+    // App Store button taps -> 'app_store_click' (Builder Web Stats, 2026-10-31).
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+      if (!a || typeof gtag !== 'function') return;
+      try { gtag('event', 'app_store_click', { link_url: a.href, link_domain: 'apps.apple.com', transport_type: 'beacon' }); } catch (err) {}
+    }, true);
   </script>
 </head>
 <body>
