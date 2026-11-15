@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change History and Custom Views: Medications in PHR 2.5 — PHR Blog</title>
+  <meta name="description" content="PHR 2.5 is out, with two big changes to medications. Every medication now keeps a dated history of its changes, and custom views can sort and arrange your list exactly the way you think about it. Lab results get a couple of handy filters too.">
+  <meta property="og:title" content="Change History and Custom Views: Medications in PHR 2.5">
+  <meta property="og:description" content="PHR 2.5 is out, with two big changes to medications. Every medication now keeps a dated history of its changes, and custom views can sort and arrange your list exactly the way you think about it. Lab results get a couple of handy filters too.">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-15">
+  <link rel="stylesheet" href="../style.css">
+<!-- Google Analytics 4 (FI-583) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18QZHJX2EM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18QZHJX2EM');
+  // App Store button taps -> 'app_store_click' (Builder Web Stats, 2026-10-31).
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    try { gtag('event', 'app_store_click', { link_url: a.href, link_domain: 'apps.apple.com', transport_type: 'beacon' }); } catch (err) {}
+  }, true);
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+        <path d="M16 6C10.5 6 6 10.5 6 16s4.5 10 10 10 10-4.5 10-10S21.5 6 16 6zm-1 15h-2v-6h2v6zm4 0h-2v-9h2v9z" fill="white"/>
+      </svg>
+      PHR Health Records
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../features.html">Features</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../support.html">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="blog-post">
+  <header class="blog-post-header">
+    <p class="blog-meta">11/15/2026 </p>
+    <h1>Change History and Custom Views: Medications in PHR 2.5</h1>
+  </header>
+
+
+
+  <div class="blog-post-body">
+<h2>Your medications: the full history, in your order</h2>
+
+<p>PHR 2.5 is out, with two big changes to medications. Every medication now keeps a dated history of its changes, and custom views can sort and arrange your list exactly the way you think about it. Lab results get a couple of handy filters too.</p>
+
+<h3>Change History</h3>
+
+<p>When you save a change to a medication, PHR now writes it down for you: the date, what it was, and what it is now. That covers the strength, amount, how often you take it, the times of day, prescriber, pharmacy, the condition it treats, and more. Stops and restarts are logged too.</p>
+
+<p>You&#39;ll find a <strong>Change History</strong> section at the bottom of each medication that has one. It shows the newest change first. It also prints on the Medication List report and is included when you share your list with Ask AI, so &quot;when did my dose go up?&quot; has an answer.</p>
+
+<p>History starts with this update, so a medication you haven&#39;t changed since installing 2.5 won&#39;t show the section yet. It fills in from your next edit.</p>
+
+<h3>Custom views, arranged your way</h3>
+
+<p>Custom views let you choose which columns show on your Medications list. In 2.5 they also decide the order, and they&#39;re far more flexible about it.</p>
+
+<p><strong>Sort by up to three columns.</strong> A new Sort section at the top of the view editor lets you stack sorts. You could sort by condition, then by time of day, then by name, so your blood pressure medications sit together in the order you take them. The list follows that order, and so do its printouts.</p>
+
+<p><strong>Any column can go first.</strong> The Medication column no longer has to lead. Put Condition or Time of Day up front if that&#39;s how you scan the list. If you don&#39;t use the Sort number column, you can turn it off.</p>
+
+<p><strong>AM and PM pill counts.</strong> Two new optional columns show how many pills you take in the morning and in the evening. They&#39;re handy for filling a pill organizer. Turn them on in Views → Customize, and they print too.</p>
+
+<p><strong>Sections in the Custom Report.</strong> The Custom Report now groups by your view&#39;s first sort column, with a choice of A–Z or Z–A order. Sort by condition, and you get a printout with one section per condition.</p>
+
+<p>Two smaller fixes round it out: Manage Views has clear Edit and Delete buttons, and restoring a backup now brings your custom views back with it.</p>
+
+<h3>Lab results</h3>
+
+<ul>
+  <li>Results imported from Apple Health now use the same test names as PHR&#39;s own list, so they line up with what you&#39;ve entered by hand.</li>
+  <li>A new <strong>High / Low</strong> filter shows only the results outside their reference range. Each filter tag has an <strong>×</strong> that clears just that filter.</li>
+  <li>Results you ordered yourself can now be fully edited.</li>
+</ul>
+
+<h3>A few more</h3>
+
+<ul>
+  <li>Printed reports use a clearer font, with all text in black.</li>
+  <li>The Immunizations list has a Facility column, and date boxes fit properly at large text sizes.</li>
+</ul>
+  </div>
+
+  <p class="blog-post-back"><a href="index.html">&larr; All posts</a></p>
+</article>
+
+<footer class="site-footer">
+  <p>Evans &amp; Associates PHR, LLC &nbsp;·&nbsp; Personal Health Record for iPad</p>
+</footer>
+
+</body>
+</html>
