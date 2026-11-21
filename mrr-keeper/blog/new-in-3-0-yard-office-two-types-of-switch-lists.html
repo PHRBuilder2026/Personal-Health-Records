@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New in 3.0: Yard Office and Two Types of Switch Lists — MRR Blog</title>
+  <meta name="description" content="Version 3.0 of Model Railroad Record Keeper adds the Yard Office, a new section in the sidebar for running operating sessions with switch lists. You can build a full train from routes and industry orders, or put together a quick list of cars to shuffle. Either way, you print a switch list, the crew works it, and the app records where every car ended up.">
+  <meta property="og:title" content="New in 3.0: Yard Office and Two Types of Switch Lists">
+  <meta property="og:description" content="Version 3.0 of Model Railroad Record Keeper adds the Yard Office, a new section in the sidebar for running operating sessions with switch lists. You can build a full train from routes and industry orders, or put together a quick list of cars to shuffle. Either way, you print a switch list, the crew works it, and the app records where every car ended up.">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-21">
+  <link rel="stylesheet" href="../../style.css">
+<!-- Google Analytics 4 (FI-583) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18QZHJX2EM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18QZHJX2EM');
+  // App Store button taps -> 'app_store_click' (Builder Web Stats, 2026-10-31).
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    try { gtag('event', 'app_store_click', { link_url: a.href, link_domain: 'apps.apple.com', transport_type: 'beacon' }); } catch (err) {}
+  }, true);
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+        <text x="16" y="21" font-size="11" font-weight="700" fill="white" text-anchor="middle" font-family="-apple-system, Helvetica, Arial, sans-serif">MRR</text>
+      </svg>
+      Model Railroad Record Keeper
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../features.html">Features</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../support.html">Support</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="blog-post">
+  <header class="blog-post-header">
+    <p class="blog-meta">11/21/2026 </p>
+    <h1>New in 3.0: Yard Office and Two Types of Switch Lists</h1>
+  </header>
+
+
+
+  <div class="blog-post-body">
+<h2>Switch lists that keep track of your cars</h2>
+
+<p>Version 3.0 of Model Railroad Record Keeper adds the Yard Office, a new section in the sidebar for running operating sessions with switch lists. You can build a full train from routes and industry orders, or put together a quick list of cars to shuffle. Either way, you print a switch list, the crew works it, and the app records where every car ended up.</p>
+
+<h3>Start with Car Location</h3>
+
+<figure class="blog-image" style="margin:1.4em 0;text-align:center;">
+  <img src="attachments/E39F46F5-879A-488F-A888-F80454548373/img-1.png" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
+</figure>
+
+<p>Everything in the Yard Office depends on knowing where each car is. <strong>Car Location</strong> lets you put cars on a location and track, either one at a time or by ticking a batch and placing them all at once. Cars you haven&#39;t placed yet show as <em>Not placed</em>. Once your cars are placed, <strong>Where&#39;s That Car?</strong> finds any car by number, reporting marks, type or where it&#39;s sitting.</p>
+
+<h3>Switch list one: a train built from orders</h3>
+
+<p>This is the full operations approach, for when you want industries to drive the traffic.</p>
+
+<ul>
+  <li><strong>Routes</strong> describe a train&#39;s run once: where it starts, its stops in order, where it ends, and its locos. Group routes by type and drag them into whatever order suits you.</li>
+</ul>
+
+<figure class="blog-image" style="margin:1.4em 0;text-align:center;">
+  <img src="attachments/E39F46F5-879A-488F-A888-F80454548373/img-2.png" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
+</figure>
+
+<ul>
+  <li><strong>Orders</strong> are your industries asking for the cars they need. An industry can fill its order straight from its Traffic tab, using the shipping and receiving you&#39;ve already set up.</li>
+</ul>
+
+<figure class="blog-image" style="margin:1.4em 0;text-align:center;">
+  <img src="attachments/E39F46F5-879A-488F-A888-F80454548373/img-3.png" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
+</figure>
+
+<ul>
+  <li><strong>Build Train</strong> brings the two together. Pick a route, attach the orders it will serve, print the switch list and release the train.</li>
+</ul>
+
+<figure class="blog-image" style="margin:1.4em 0;text-align:center;">
+  <img src="attachments/E39F46F5-879A-488F-A888-F80454548373/img-4.png" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
+</figure>
+
+<h3>Switch list two: the Quick Switch List</h3>
+
+<p>Sometimes you just want the crew to shift a few cars. A <strong>Quick Switch List</strong> is a name, a loco, a crew and a list of cars, each going from where it sits now to wherever you pick. There are no routes or orders to set up. Add cars with the same search Where&#39;s That Car? uses, and drag them into the order the crew should work them. Print it and run it as is, or pick it on Build Train to run it as a train.</p>
+
+<p>Finished lists are kept as history. When you want to run the same moves again, <strong>Run Again</strong> starts a fresh copy that begins from where each car sits now.</p>
+
+<h3>Dispatch: Done, Not Done, and what really happened</h3>
+
+<figure class="blog-image" style="margin:1.4em 0;text-align:center;">
+  <img src="attachments/E39F46F5-879A-488F-A888-F80454548373/img-5.png" loading="lazy" style="max-width:100%;height:auto;border-radius:8px;">
+</figure>
+
+<p>The printed list gives every line two boxes, <strong>Done</strong> and <strong>Not Done</strong>, and a space for the crew to write what happened. Back at the app, every line starts as Done. You only touch the ones that didn&#39;t go to plan: car not found, swapped for another car, bad order or no room. For those, you record where the car ended up.</p>
+
+<p>Then choose <strong>Complete</strong>. The app updates every car&#39;s location to where it ended up. A car nobody could find is marked <em>Location unknown</em>, so you know to go looking. If a car was swapped, the car that actually went gets the new location. Your next session starts from the layout as it really is.</p>
+  </div>
+
+  <p class="blog-post-back"><a href="index.html">&larr; All posts</a></p>
+</article>
+
+<footer class="site-footer">
+  <p>Model Railroad Record Keeper &nbsp;·&nbsp; Evans &amp; Associates PHR, LLC</p>
+</footer>
+
+</body>
+</html>
