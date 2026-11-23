@@ -932,3 +932,6 @@ img { max-width: 100%; height: auto; }
 .video-row-text { display: flex; flex-direction: column; }
 .video-row-title { font-size: 1.25rem; font-weight: 700; color: var(--phr-green-dark); }
 .video-row-blurb { font-size: 1.1rem; color: #111; }
+.video-row-date { font-size: 1rem; font-weight: 600; color: #111; }
+.video-sort { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; font-size: 1.1rem; color: #111; font-weight: 600; }
+.video-sort select { font-size: 1.1rem; padding: 6px 10px; border: 2px solid var(--phr-green); border-radius: 8px; background: #fff; color: #111; }

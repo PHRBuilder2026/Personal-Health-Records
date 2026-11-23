@@ -48,44 +48,85 @@
 <main class="video-page">
   <h1>How-To Videos</h1>
   <p class="video-blurb">Short videos showing how to use Model Railroad Record Keeper, one task at a time.</p>
-  <div class="video-list">
-    <a class="video-row" href="yard-office-overview.html">
+  <div class="video-sort">
+    <label for="video-sort">Sort by date</label>
+    <select id="video-sort">
+      <option value="latest">Latest</option>
+      <option value="oldest">Oldest</option>
+    </select>
+  </div>
+  <!-- Each row: data-date = day added (yyyy-mm-dd). data-order breaks ties. -->
+  <div class="video-list" id="video-list">
+    <a class="video-row" data-date="2026-11-22" data-order="1" href="yard-office-overview.html">
       <span class="video-row-play">&#9654;</span>
-      <span class="video-row-text"><span class="video-row-title">Yard Office: Overview</span>
+      <span class="video-row-text"><span class="video-row-date"></span><span class="video-row-title">Yard Office: Overview</span>
       <span class="video-row-blurb">A tour of the Yard Office: where your cars are, routes and orders, Quick Switch Lists, building a train, and keying in what happened on Dispatch. Start here.</span></span>
     </a>
-    <a class="video-row" href="yard-office-build-train.html">
+    <a class="video-row" data-date="2026-11-22" data-order="2" href="yard-office-build-train.html">
       <span class="video-row-play">&#9654;</span>
-      <span class="video-row-text"><span class="video-row-title">Yard Office: Build Train</span>
+      <span class="video-row-text"><span class="video-row-date"></span><span class="video-row-title">Yard Office: Build Train</span>
       <span class="video-row-blurb">How to build a train: pick a route, plan it from your orders or a Quick Switch List, print the Switch List, then key in what happened on Dispatch.</span></span>
     </a>
-    <a class="video-row" href="yard-office-car-location.html">
+    <a class="video-row" data-date="2026-11-22" data-order="3" href="yard-office-car-location.html">
       <span class="video-row-play">&#9654;</span>
-      <span class="video-row-text"><span class="video-row-title">Yard Office: Car Location</span>
+      <span class="video-row-text"><span class="video-row-date"></span><span class="video-row-title">Yard Office: Car Location</span>
       <span class="video-row-blurb">How to put your cars on a location and track, one at a time or a batch at once, and see what is sitting where. Car Location is where operations start.</span></span>
     </a>
-    <a class="video-row" href="yard-office-dispatch.html">
+    <a class="video-row" data-date="2026-11-22" data-order="4" href="yard-office-dispatch.html">
       <span class="video-row-play">&#9654;</span>
-      <span class="video-row-text"><span class="video-row-title">Yard Office: Dispatch</span>
+      <span class="video-row-text"><span class="video-row-date"></span><span class="video-row-title">Yard Office: Dispatch</span>
       <span class="video-row-blurb">How to key in what happened after a session: every line starts Done, mark the ones the crew didn&#39;t finish as Not Done with why and where the car ended up, then Complete the train.</span></span>
     </a>
-    <a class="video-row" href="yard-office-orders.html">
+    <a class="video-row" data-date="2026-11-22" data-order="5" href="yard-office-orders.html">
       <span class="video-row-play">&#9654;</span>
-      <span class="video-row-text"><span class="video-row-title">Yard Office: Orders</span>
+      <span class="video-row-text"><span class="video-row-date"></span><span class="video-row-title">Yard Office: Orders</span>
       <span class="video-row-blurb">How to set up orders: each one is an industry asking for the cars it wants dropped and the cars it has ready to go. A train fills them, then they move to history.</span></span>
     </a>
-    <a class="video-row" href="yard-office-quick-switch-list.html">
+    <a class="video-row" data-date="2026-11-22" data-order="6" href="yard-office-quick-switch-list.html">
       <span class="video-row-play">&#9654;</span>
-      <span class="video-row-text"><span class="video-row-title">Yard Office: Quick Switch List</span>
+      <span class="video-row-text"><span class="video-row-date"></span><span class="video-row-title">Yard Office: Quick Switch List</span>
       <span class="video-row-blurb">How to make a quick list of cars to move, each going from where it sits now to where you send it, with no routes or orders to set up. To run it, pick the list on Build Train.</span></span>
     </a>
-    <a class="video-row" href="yard-office-routes.html">
+    <a class="video-row" data-date="2026-11-22" data-order="7" href="yard-office-routes.html">
       <span class="video-row-play">&#9654;</span>
-      <span class="video-row-text"><span class="video-row-title">Yard Office: Routes</span>
+      <span class="video-row-text"><span class="video-row-date"></span><span class="video-row-title">Yard Office: Routes</span>
       <span class="video-row-blurb">How to set up a route once: where the train starts and ends, the industries it serves in order, and its locos. Each session a train picks the route on Build Train.</span></span>
     </a>
   </div>
 </main>
+
+<script>
+  // Date on each row + Latest / Oldest sort (Fred, 2026-11-22).
+  (function () {
+    var list = document.getElementById('video-list');
+    var pick = document.getElementById('video-sort');
+    var rows = Array.prototype.slice.call(list.querySelectorAll('.video-row'));
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    rows.forEach(function (r) {
+      var d = (r.getAttribute('data-date') || '').split('-');
+      if (d.length === 3) {
+        r.querySelector('.video-row-date').textContent =
+          months[parseInt(d[1], 10) - 1] + ' ' + parseInt(d[2], 10) + ', ' + d[0];
+      }
+    });
+    function order(a, b) { return (+a.getAttribute('data-order')) - (+b.getAttribute('data-order')); }
+    function sortRows() {
+      var latest = pick.value !== 'oldest';
+      rows.sort(function (a, b) {
+        var da = a.getAttribute('data-date'), db = b.getAttribute('data-date');
+        if (da === db) return order(a, b);
+        return latest ? (da < db ? 1 : -1) : (da < db ? -1 : 1);
+      });
+      rows.forEach(function (r) { list.appendChild(r); });
+    }
+    try { var saved = localStorage.getItem('mrrVideoSort'); if (saved) pick.value = saved; } catch (e) {}
+    pick.addEventListener('change', function () {
+      try { localStorage.setItem('mrrVideoSort', pick.value); } catch (e) {}
+      sortRows();
+    });
+    sortRows();
+  })();
+</script>
 
 <footer class="site-footer">
   <p>Model Railroad Record Keeper &nbsp;·&nbsp; Evans &amp; Associates PHR, LLC</p>
