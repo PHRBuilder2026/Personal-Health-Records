@@ -880,3 +880,55 @@ img { max-width: 100%; height: auto; }
   padding: 48px 24px;
   font-size: 1.05rem;
 }
+
+/* ── MRR How-To Videos (2026-11-22) — large, dark text; YouTube plays in place ── */
+.video-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+  color: #111;
+}
+.video-page h1 {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  color: var(--phr-green-dark);
+  margin-bottom: 12px;
+}
+.video-blurb { font-size: 1.2rem; color: #111; margin-bottom: 24px; }
+.video-back { font-size: 1.1rem; margin-bottom: 16px; }
+.video-back a { font-weight: 600; }
+.video-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--phr-shadow-lg);
+}
+.video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-screens { font-size: 1.1rem; color: #111; margin-top: 18px; }
+.video-list { display: flex; flex-direction: column; gap: 14px; }
+.video-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 18px;
+  background: var(--phr-white);
+  border: 2px solid var(--phr-border);
+  border-radius: 12px;
+  color: #111;
+}
+.video-row:hover { border-color: var(--phr-green); color: #111; }
+.video-row-play {
+  flex: none;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--phr-green);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.video-row-text { display: flex; flex-direction: column; }
+.video-row-title { font-size: 1.25rem; font-weight: 700; color: var(--phr-green-dark); }
+.video-row-blurb { font-size: 1.1rem; color: #111; }
