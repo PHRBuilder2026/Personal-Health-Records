@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Morning and Evening Pill Totals: What&#39;s New in PHR 2.6 — PHR Blog</title>
+  <meta name="description" content="PHR 2.6 is a small release built around a few requests. Your medication list can now add up the pills you take in the morning and in the evening. Sleep nights can carry your own notes. And a couple of screens got easier to read.">
+  <meta property="og:title" content="Morning and Evening Pill Totals: What&#39;s New in PHR 2.6">
+  <meta property="og:description" content="PHR 2.6 is a small release built around a few requests. Your medication list can now add up the pills you take in the morning and in the evening. Sleep nights can carry your own notes. And a couple of screens got easier to read.">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-11-22">
+  <link rel="stylesheet" href="../style.css">
+<!-- Google Analytics 4 (FI-583) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-18QZHJX2EM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-18QZHJX2EM');
+  // App Store button taps -> 'app_store_click' (Builder Web Stats, 2026-10-31).
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    try { gtag('event', 'app_store_click', { link_url: a.href, link_domain: 'apps.apple.com', transport_type: 'beacon' }); } catch (err) {}
+  }, true);
+</script>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="8" fill="#2E8B57"/>
+        <path d="M16 6C10.5 6 6 10.5 6 16s4.5 10 10 10 10-4.5 10-10S21.5 6 16 6zm-1 15h-2v-6h2v6zm4 0h-2v-9h2v9z" fill="white"/>
+      </svg>
+      PHR Health Records
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../features.html">Features</a></li>
+      <li><a href="index.html" class="active">Blog</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../support.html">FAQ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<article class="blog-post">
+  <header class="blog-post-header">
+    <p class="blog-meta">11/22/2026 </p>
+    <p class="blog-meta blog-version">Version 2.6</p>
+    <h1>Morning and Evening Pill Totals: What&#39;s New in PHR 2.6</h1>
+  </header>
+
+
+
+  <div class="blog-post-body">
+<h2>A few small things you asked for</h2>
+
+<p>PHR 2.6 is a small release built around a few requests. Your medication list can now add up the pills you take in the morning and in the evening. Sleep nights can carry your own notes. And a couple of screens got easier to read.</p>
+
+<h3>Morning and evening totals</h3>
+
+<p>PHR 2.5 added optional <strong>AM</strong> and <strong>PM</strong> columns to the Medications list, showing how many pills each medication needs in the morning and in the evening. Now, whenever your view includes either column, a <strong>Total</strong> row sits at the top of the list and adds them up.</p>
+
+<ul>
+  <li>The total counts only what&#39;s showing, so your Status and Type filters apply. Set Status to Active and you&#39;ll see what you take today.</li>
+  <li>As Needed medications don&#39;t add to the count.</li>
+  <li>The same Total row prints at the top of the Custom View report, which makes a handy sheet for filling a pill organizer.</li>
+</ul>
+
+<p>To turn the columns on, open <strong>Views</strong> on the Medications list, choose <strong>Customize</strong>, and switch on AM and PM.</p>
+
+<h3>What those little icons mean</h3>
+
+<p>The Medications list shows small icons after a medication&#39;s name: one for discontinued, one for a bad reaction, one for refills left, and a few more. The Help for that screen now opens with a key that shows each icon in its own colour, with a few words on what it means. Tap the <strong>?</strong> in the upper-right of the Medications list to see it.</p>
+
+<h3>A note for any night</h3>
+
+<p>Sleep Study Daily now lets you add your own note to a night. Look for <strong>+ Note</strong> on the Sleep Stages line. Write down anything that might explain the night: a late dinner, a new medication, a long walk. The start of the note shows on the line, and the full text is a tap away. To remove a note, clear the text and save.</p>
+
+<p>Notes are kept separately from your imported sleep data, so bringing in new data from Apple Health never touches them.</p>
+
+<h3>Notes on the BP History Report</h3>
+
+<p>On the Blood Pressure History Report, a reading&#39;s note now prints on its own line under the reading instead of squeezing into a narrow column. Longer notes are finally easy to read on paper.</p>
+  </div>
+
+  <p class="blog-post-back"><a href="index.html">&larr; All posts</a></p>
+</article>
+
+<footer class="site-footer">
+  <p>Evans &amp; Associates PHR, LLC &nbsp;·&nbsp; Personal Health Record for iPad</p>
+</footer>
+
+</body>
+</html>
