@@ -22,6 +22,7 @@
     try { gtag('event', 'app_store_click', { link_url: a.href, link_domain: 'apps.apple.com', transport_type: 'beacon' }); } catch (err) {}
   }, true);
 </script>
+  <link rel="stylesheet" href="../mrr.css">
 </head>
 <body>
 
@@ -47,9 +48,14 @@
   </div>
 </nav>
 
+<!-- Page banner (site standard — mrr.css) -->
+  <section class="mrr-banner">
+    <h1>Yard Office: Routes</h1>
+    <p>How-to video</p>
+  </section>
+
 <main class="video-page">
   <p class="video-back"><a href="index.html">&larr; All how-to videos</a></p>
-  <h1>Yard Office: Routes</h1>
   <p class="video-blurb">How to set up a route once: where the train starts and ends, the industries it serves in order, and its locos. Each session a train picks the route on Build Train.</p>
   <div class="video-frame">
     <iframe src="https://www.youtube-nocookie.com/embed/cukRDz0Lmtw?rel=0&amp;modestbranding=1"
@@ -61,8 +67,34 @@
 </main>
 
 <footer class="site-footer">
-  <p>Model Railroad Record Keeper &nbsp;·&nbsp; Evans &amp; Associates PHR, LLC</p>
-</footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Model Railroad Record Keeper</h3>
+        <p>An app for model railroaders by Evans &amp; Associates PHR, LLC. Your railroad, organized on your device.</p>
+      </div>
+      <div class="footer-links">
+        <h4>App</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../features.html">Features</a></li>
+          <li><a href="../jmri.html">JMRI</a></li>
+          <li><a href="../videos/index.html">Videos</a></li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../support.html">Support</a></li>
+          <li><a href="../privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="../support.html">Get Help</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Evans &amp; Associates PHR, LLC. All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
