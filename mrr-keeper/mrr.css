@@ -42,18 +42,27 @@
   max-width: 900px;
   opacity: 1;
 }
-.mrr-banner .mrr-banner-store {
-  display: inline-flex;
-  margin-top: 14px;
-  background: #111;
+/* "On the App Store" pill, top-right corner of a banner (Features).
+   Pinned to the corner so the banner keeps its height. On narrow screens
+   it drops under the subtitle instead. */
+.mrr-banner .mrr-buy {
+  position: absolute;
+  top: 14px;
+  right: 24px;
+  background: var(--phr-green);
   color: #fff !important;
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 12px;
-  font-weight: 600;
-  font-size: 1.05rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
 }
-.mrr-banner .mrr-banner-store:hover { background: #000; }
+.mrr-banner .mrr-buy:hover { background: var(--phr-green-dark); }
+@media (max-width: 700px) {
+  .mrr-banner .mrr-buy { position: static; display: inline-block; margin-top: 12px; }
+}
 /* The app icon sits on the left of every banner (2026-11-24). It is
    pinned to the side, not in the flow, so the banner keeps its height and
    the text stays centered. Side padding keeps long titles clear of it.
