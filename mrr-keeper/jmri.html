@@ -30,6 +30,10 @@
     .jmri-list li { position:relative; padding:7px 0 7px 30px; line-height:1.5; }
     .jmri-list li::before { content:"\2713"; position:absolute; left:0; top:7px; color:#2E8B57; font-weight:800; }
     .content-section h3 { font-size:1.05rem; font-weight:700; color:var(--phr-green-dark); margin:18px 0 6px; }
+    .rk-block { border-left:4px solid #2E8B57; background:#f4faf5; padding:12px 18px 10px; margin:18px 0; border-radius:6px; }
+    .rk-block h3 { margin-top:2px; }
+    .rk-links { font-weight:700; margin-top:6px; }
+    .rk-links a { color:#1A3C2A; }
   </style>
 </head>
 <body>
@@ -76,48 +80,56 @@
 
   <section class="content-section">
     <h2>What Record Keeper does</h2>
-    <p>Record Keeper is a $9.99 iPad and Mac app with no Java, no connection to the layout, and nothing to configure. Use it in the recliner, at the workbench, or at a train show &mdash; no laptop parked beside the layout.</p>
-    <h3>Your whole collection, not just the roster</h3>
-    <p>JMRI keeps a roster of the locomotives and cars that run. It has no home for everything else you've bought for the hobby &mdash; the structures and kits, the track and turnouts, the decoders and wire, the tools, the scenery and detail parts &mdash; or for what you paid, what it's worth, what's running low, and what's for sale. That's Record Keeper's Inventory, and it's the part nothing else in the hobby does.</p>
-    <p>It also keeps the rest of the records JMRI doesn't:</p>
-    <ul class="jmri-list">
-      <li><strong>Hobby inventory beyond the rails</strong> &mdash; track, electronics, structures, kits, tools, scenery &mdash; with quantities, what you paid, what it's worth, and a warning when you're running low.</li>
-      <li><strong>Your eBay purchases, brought in</strong> &mdash; download your purchase history from eBay and Record Keeper turns it into inventory items, sorted by your own rules, so years of buying don't have to be typed in.</li>
-      <li><strong>A full equipment roster with the paperwork side</strong> &mdash; what you paid, what it's worth now, condition, where it's stored, when it was last serviced, and a photo. Locomotives carry their DCC details too: address, decoder, function keys, and the CVs you've changed &mdash; so what you programmed in DecoderPro is written down somewhere you can find at the workbench.</li>
-      <li><strong>Your JMRI roster comes with you</strong> &mdash; Record Keeper imports locomotives and cars from JMRI CSV files, so an established roster moves over without retyping.</li>
-      <li><strong>A reference library</strong> &mdash; manuals as attached PDFs, saved links, and notes, all offline on your iPad or Mac.</li>
-      <li><strong>A project to-do list</strong> built for layout work, with priorities, categories, and saved views.</li>
-      <li><strong>Operating session paperwork</strong> &mdash; jobs with steps and dependencies, a dispatch board for running a session with real people, engineer assignments, and printed job cards and schedules. Dozens of reports print from the iPad or Mac, or export as PDFs.</li>
-      <li><strong>Car cards and waybills</strong> &mdash; design your own car cards, print them with a fold-up waybill pocket, and print fold-over waybills sized to fit. Give each industry what it ships and receives, and Record Keeper drafts the waybills for you.</li>
-      <li><strong>Switch lists and car locations</strong> &mdash; record where every car sits, build a train from a route and your industries&rsquo; orders (or a quick list of cars), print the switch list, and key in what the crew did. Record Keeper updates where every car sits.</li>
-    </ul>
-    <p>Everything lives on your own iPad or Mac &mdash; no cloud, no account, no data collected.</p>
+    <p>Record Keeper is a $9.99 iPad and Mac app with no Java, no connection to the layout, and nothing to configure. Use it in the recliner, at the workbench, or at a train show &mdash; no laptop parked beside the layout. Everything lives on your own device &mdash; no cloud, no account, no data collected.</p>
+
+    <div class="rk-block">
+      <h3>Your whole collection, not just the roster</h3>
+      <p>JMRI keeps a roster of what runs. It has no home for everything else you've bought for the hobby &mdash; structures and kits, track and turnouts, decoders and wire, tools, scenery and detail parts &mdash; or what you paid, what it's worth, what's running low, and what's for sale.</p>
+      <ul class="jmri-list">
+        <li><strong>Hobby inventory</strong> with quantities, prices, values, storage spots and a low-stock warning.</li>
+        <li><strong>Your eBay purchases, brought in</strong> &mdash; download your history from eBay and it becomes inventory, sorted by your own rules.</li>
+        <li><strong>A reference library</strong> &mdash; manuals as PDFs, saved links and notes, all offline.</li>
+      </ul>
+      <p class="rk-links"><a href="features.html">See the features &rarr;</a></p>
+    </div>
+
+    <div class="rk-block">
+      <h3>Locomotives and rolling stock, with the paperwork</h3>
+      <p>Every engine and car with its photo, marks, specs, couplers, what you paid and what it's worth &mdash; plus the DCC side you set up in DecoderPro, written down where you can find it at the workbench.</p>
+      <ul class="jmri-list">
+        <li><strong>Decoder, address, sound card and stay-alive</strong>, and the CVs you changed &mdash; ready for the next reset.</li>
+        <li><strong>F1&ndash;F32 labels</strong> that fill in from the sound card, and a Function Key Matrix that prints every engine's keys on one sheet.</li>
+        <li><strong>Custom column views and a pivot table</strong> &mdash; count or total your fleet by type, road or year bought, and print exactly what's on screen.</li>
+        <li><strong>Car cards you design</strong>, with a fold-up waybill pocket, and fold-over waybills.</li>
+        <li><strong>Bring your JMRI roster along</strong> &mdash; locomotives and cars import from JMRI CSV files.</li>
+      </ul>
+      <p class="rk-links"><a href="features.html">See the features &rarr;</a> &nbsp; <a href="videos/custom-views.html">&#9654; Custom views video</a></p>
+    </div>
+
+    <div class="rk-block">
+      <h3>Yard Office &mdash; switch lists without a computer at the layout</h3>
+      <p>Run real operations on paper or on the iPad. Your industries ask for cars, you build the train, Record Keeper prints the switch list and keeps track of where every car sits afterward.</p>
+      <ul class="jmri-list">
+        <li><strong>Car Location</strong> &mdash; every car at every spot, loaded or empty, and Where's That Car? to find one in seconds.</li>
+        <li><strong>Routes and industry orders</strong> &mdash; each industry asks for what it needs set out and picked up.</li>
+        <li><strong>Build Train and Dispatch</strong> &mdash; pick a route, the orders come in, the cars are chosen, the switch list prints. Key in what the crew did and the car locations update.</li>
+        <li><strong>Quick Switch List</strong> for a short job, and a live operating board for the session &mdash; who's ready, who's running, which tracks are locked.</li>
+      </ul>
+      <p class="rk-links"><a href="videos/yard-office-overview.html">&#9654; Yard Office overview video</a> &nbsp; <a href="videos/index.html">All videos &rarr;</a></p>
+    </div>
+
+    <div class="rk-block">
+      <h3>Learn it in an evening</h3>
+      <p>No manual to wade through and no setup weekend. Every screen has a <strong>?</strong> that explains that screen, right where you are, and works without the internet. Short videos walk through the bigger features step by step.</p>
+      <p class="rk-links"><a href="videos/index.html">&#9654; Watch the videos &rarr;</a></p>
+    </div>
   </section>
 
   <section class="content-section">
     <h2>Where they overlap &mdash; honestly</h2>
-    <p>OperationsPro and Record Keeper both handle operating sessions, in different ways. OperationsPro simulates car forwarding: you set up schedules and loads, and the computer decides which cars move and where. Record Keeper keeps the decisions with you. Your industries ask for cars through orders, you build each train from a route, and Record Keeper prints the switch list and keeps track of where every car sits afterward. It also prints car cards and waybills if your crew prefers cards in a pocket, and it&rsquo;s the dispatcher&rsquo;s clipboard during the session &mdash; who&rsquo;s ready, who&rsquo;s running, which tracks are locked. If you love OperationsPro&rsquo;s automatic car routing, keep it. If you&rsquo;d rather decide the moves yourself and keep the paperwork simple, Record Keeper may fit better.</p>
-  </section>
-
-  <section class="content-section">
-    <h2>At a glance</h2>
-    <table class="jmri-table">
-      <thead>
-        <tr><th></th><th>JMRI</th><th>Record Keeper</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Runs trains, programs decoders</td><td>Yes</td><td>No</td></tr>
-        <tr><td>Needs a computer wired to the layout</td><td>Yes</td><td>No &mdash; iPad or Mac, nothing to connect</td></tr>
-        <tr><td>Collection &amp; hobby-supply inventory</td><td>No</td><td>Yes</td></tr>
-        <tr><td>Purchase, value &amp; condition records</td><td>No</td><td>Yes</td></tr>
-        <tr><td>Imports your eBay purchases</td><td>No</td><td>Yes</td></tr>
-        <tr><td>Manuals &amp; reference library</td><td>No</td><td>Yes</td></tr>
-        <tr><td>Session paperwork &amp; dispatch board</td><td>Automated (OperationsPro)</td><td>Human-run: switch lists, job cards, car cards &amp; waybills</td></tr>
-        <tr><td>Tracks where every car sits</td><td>Yes (OperationsPro)</td><td>Yes</td></tr>
-        <tr><td>Price</td><td>Free</td><td>$9.99 once</td></tr>
-      </tbody>
-    </table>
-    <p>Use both. JMRI at the command station; Record Keeper everywhere else.</p>
+    <p>OperationsPro and Record Keeper both build trains and print switch lists, in different ways. OperationsPro simulates car forwarding: you set up schedules and loads, and the computer decides which cars move and where. Record Keeper keeps the decisions with you &mdash; your industries' orders, your routes, your call. If you love OperationsPro's automatic car routing, keep it. If you'd rather decide the moves yourself and keep the paperwork simple, Record Keeper may fit better.</p>
+    <p>DecoderPro also keeps function-key labels. Record Keeper keeps them too, next to the purchase record, the photo and the CVs &mdash; on the iPad in your hand rather than the computer by the layout.</p>
+    <p><strong>Use both. JMRI at the command station; Record Keeper everywhere else.</strong></p>
   </section>
 
   <!-- Footer -->
