@@ -7,8 +7,9 @@
    Change a size here and every page follows. Don't set heading sizes
    in a page's own <style> or in style="" — that is how the pages drifted.
 
-     Banner title ......... 2.2rem  white, bold
-     Banner subtitle ...... 1.1rem  white, one line
+     Banner ............... light green, same as the Home header
+     Banner title ......... 2.2rem  dark green #1A3C2A, bold
+     Banner subtitle ...... 1.1rem  green #2E8B57, semibold, one line
      Section heading (h2) . 1.5rem  green-dark, bold
      Sub-heading (h3) ..... 1.2rem  green-dark, bold
      Card title ........... 1.3rem  green-dark, bold  (blog cards, video rows)
@@ -19,8 +20,8 @@
 
 /* ── The banner — every page except Home ── */
 .mrr-banner {
-  background: linear-gradient(135deg, var(--phr-green) 0%, var(--phr-green-dark) 100%);
-  color: #fff;
+  background: linear-gradient(160deg, #EAF6EC, #D2EAD7);
+  color: #1A3C2A;
   text-align: center;
   padding: 22px 24px 20px;
 }
@@ -28,14 +29,15 @@
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.2;
-  color: #fff;
+  color: #1A3C2A;
   margin: 0 auto;
   max-width: 1000px;
   text-wrap: balance;
 }
 .mrr-banner p {
   font-size: 1.1rem;
-  color: #fff;
+  font-weight: 600;
+  color: #2E8B57;
   margin: 6px auto 0;
   max-width: 900px;
   opacity: 1;
