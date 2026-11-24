@@ -54,6 +54,27 @@
   font-size: 1.05rem;
 }
 .mrr-banner .mrr-banner-store:hover { background: #000; }
+/* The app icon sits on the left of every banner (2026-11-24). It is
+   pinned to the side, not in the flow, so the banner keeps its height and
+   the text stays centered. Side padding keeps long titles clear of it.
+   The image path is relative to this file. Hidden on narrow screens. */
+.mrr-banner { position: relative; padding-left: 120px; padding-right: 120px; }
+.mrr-banner::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 17px;
+  background: url("images/icon.png") center / cover no-repeat;
+  box-shadow: 0 4px 12px rgba(0,0,0,.14);
+}
+@media (max-width: 700px) {
+  .mrr-banner { padding-left: 24px; padding-right: 24px; }
+  .mrr-banner::before { display: none; }
+}
 @media (max-width: 600px) {
   .mrr-banner h1 { font-size: 1.75rem; }
 }
