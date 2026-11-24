@@ -102,8 +102,8 @@
     .trss-title{color:#1A3C2A;font-size:1.9rem;text-align:center;margin:6px 0 4px}
     .trss-sub{color:#111;text-align:center;margin:0 0 22px;font-size:1.05rem}
     .trss-show{position:relative;background:linear-gradient(160deg,#f4faf5,#e9f4ec);border:1px solid #d8eadc;
-      border-radius:20px;padding:26px;box-shadow:0 12px 30px rgba(20,60,42,.08)}
-    .trss-slide{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center;min-height:440px}
+      border-radius:20px;padding:26px 64px;box-shadow:0 12px 30px rgba(20,60,42,.08)}
+    .trss-slide{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:start;min-height:440px}
     .trss-imgwrap{background:#fff;border-radius:14px;padding:14px;box-shadow:0 8px 22px rgba(0,0,0,.12);
       display:flex;align-items:center;justify-content:center}
     .trss-imgwrap img{max-width:100%;max-height:460px;border-radius:6px;display:block}
@@ -113,11 +113,11 @@
     .trss-copy li{position:relative;padding:6px 0 6px 30px;line-height:1.45;color:#1b241f}
     .trss-copy li::before{content:"\2713";position:absolute;left:0;top:6px;color:#2E8B57;font-weight:800}
     .trss-copy li strong{font-weight:700}
-    .trss-arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;
+    .trss-arrow{position:absolute;top:270px;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;
       border:none;background:#2E8B57;color:#fff;font-size:22px;line-height:1;cursor:pointer;
       box-shadow:0 4px 12px rgba(0,0,0,.2);z-index:2}
     .trss-arrow:hover{background:#256e46}
-    .trss-prev{left:-12px} .trss-next{right:-12px}
+    .trss-prev{left:9px} .trss-next{right:9px}
     .trss-bar{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
     .trss-count{font-variant-numeric:tabular-nums;color:#1b241f;font-weight:600;font-size:.95rem;min-width:64px;text-align:center}
     .trss-dots{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;max-width:640px}
@@ -126,7 +126,7 @@
     .trss-play{background:none;border:1px solid #bcd3c2;color:#2E8B57;border-radius:8px;padding:5px 12px;
       cursor:pointer;font-weight:600;font-size:1rem}
     @media (max-width:820px){ .trss-slide{grid-template-columns:1fr;gap:18px} .trss-imgwrap img{max-height:340px}
-      .trss-prev{left:2px} .trss-next{right:2px} }
+      .trss-show{padding:20px 16px} .trss-arrow{top:200px} .trss-prev{left:2px} .trss-next{right:2px} }
   </style>
   <script>
   (function(){
