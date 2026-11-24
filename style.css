@@ -469,6 +469,7 @@ img { max-width: 100%; height: auto; }
 .page-header h1 {
   font-size: 2rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .page-header p {
@@ -699,8 +700,9 @@ img { max-width: 100%; height: auto; }
 /* ── Blog (FI-353) ── */
 
 .hero-compact {
-  padding: 56px 24px 36px;
+  padding: 18px 24px 16px;
 }
+.hero-compact p { margin-bottom: 0; }
 /* FI 684: the blog hero now uses the descriptive sentence as its only
    title, at a reasonable size (no oversized "PHR Blog" heading). */
 .hero-compact h1 {
