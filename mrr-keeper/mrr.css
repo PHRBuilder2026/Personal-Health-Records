@@ -26,7 +26,7 @@
   padding: 22px 24px 20px;
 }
 .mrr-banner h1 {
-  font-size: 2.2rem;
+  font-size: 2.65rem;
   font-weight: 700;
   line-height: 1.2;
   color: #1A3C2A;
@@ -35,7 +35,7 @@
   text-wrap: balance;
 }
 .mrr-banner p {
-  font-size: 1.1rem;
+  font-size: 1.32rem;
   font-weight: 600;
   color: #2E8B57;
   margin: 6px auto 0;
@@ -85,7 +85,7 @@
   .mrr-banner::before { display: none; }
 }
 @media (max-width: 600px) {
-  .mrr-banner h1 { font-size: 1.75rem; }
+  .mrr-banner h1 { font-size: 2.1rem; }
 }
 
 /* ── Section headings ── */
