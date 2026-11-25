@@ -1,0 +1,189 @@
+/* ── Model Railroad Record Keeper — site standard (2026-11-24) ──
+   Loaded LAST on every Record Keeper page, after the shared style.css
+   and the page's own <style>, so these rules win. The PHR site never
+   loads this file.
+
+   One banner, three heading sizes, one heading green, one body size.
+   Change a size here and every page follows. Don't set heading sizes
+   in a page's own <style> or in style="" — that is how the pages drifted.
+
+     Banner ............... light green, same as the Home header
+     Banner title ......... 2.2rem  dark green #1A3C2A, bold
+     Banner subtitle ...... 1.1rem  green #2E8B57, semibold, one line
+     Section heading (h2) . 1.5rem  green-dark, bold
+     Sub-heading (h3) ..... 1.2rem  green-dark, bold
+     Card title ........... 1.3rem  green-dark, bold  (blog cards, video rows)
+     Body text ............ 1.05rem near-black
+*/
+
+:root { --mrr-head: var(--phr-green-dark); }
+
+/* ── Top bar — logo, site name, menu (2026-11-25) ──
+   ~20% bigger than the shared style.css (PHR site keeps its own sizes).
+   Bar height and the phone dropdown's top move together. */
+.site-nav .nav-inner { height: 72px; }
+.site-nav .nav-logo { font-size: 1.5rem; white-space: nowrap; }
+.site-nav .nav-logo svg { width: 38px; height: 38px; }
+.site-nav .nav-links a { font-size: 1.15rem; white-space: nowrap; }
+@media (max-width: 1180px) { .site-nav .nav-links { gap: 20px; } }
+@media (max-width: 768px) { .site-nav .nav-links.open { top: 72px; } }
+
+/* ── The banner — every page except Home ── */
+.mrr-banner {
+  background: linear-gradient(160deg, #EAF6EC, #D2EAD7);
+  color: #1A3C2A;
+  text-align: center;
+  padding: 22px 24px 20px;
+}
+.mrr-banner h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1A3C2A;
+  margin: 0 auto;
+  max-width: 1000px;
+  text-wrap: balance;
+}
+.mrr-banner p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2E8B57;
+  margin: 6px auto 0;
+  max-width: 900px;
+  opacity: 1;
+}
+/* "On the App Store" pill, top-right corner of a banner (Features).
+   Pinned to the corner so the banner keeps its height. On narrow screens
+   it drops under the subtitle instead. */
+.mrr-banner .mrr-buy {
+  position: absolute;
+  top: 14px;
+  right: 24px;
+  background: var(--phr-green);
+  color: #fff !important;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+}
+.mrr-banner .mrr-buy:hover { background: var(--phr-green-dark); }
+@media (max-width: 700px) {
+  .mrr-banner .mrr-buy { position: static; display: inline-block; margin-top: 12px; }
+}
+/* The app icon sits on the left of every banner (2026-11-24). It is
+   pinned to the side, not in the flow, so the banner keeps its height and
+   the text stays centered. Side padding keeps long titles clear of it.
+   The image path is relative to this file. Hidden on narrow screens. */
+.mrr-banner { position: relative; padding-left: 120px; padding-right: 120px; }
+.mrr-banner::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 17px;
+  background: url("images/icon.png") center / cover no-repeat;
+  box-shadow: 0 4px 12px rgba(0,0,0,.14);
+}
+@media (max-width: 700px) {
+  .mrr-banner { padding-left: 24px; padding-right: 24px; }
+  .mrr-banner::before { display: none; }
+}
+@media (max-width: 600px) {
+  .mrr-banner h1 { font-size: 1.75rem; }
+}
+
+/* ── Section headings ── */
+.content-section h2,
+.blog-post-body h2,
+.fx-group summary {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--mrr-head);
+}
+.content-section h2 { margin-top: 28px; margin-bottom: 10px; }
+.content-section h2:first-child { margin-top: 0; }
+.blog-post-body h2 { margin: 28px 0 10px; }
+
+/* ── Sub-headings ── */
+.content-section h3,
+.blog-post-body h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--mrr-head);
+  margin: 18px 0 6px;
+}
+
+/* ── Card titles ── */
+.blog-card h2,
+.video-row-title,
+.feature-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--mrr-head);
+}
+.feature-card h3 { margin: 0; }
+
+/* ── Body text ── */
+.content-section p,
+.content-section li,
+.blog-post-body,
+.blog-card p,
+.video-blurb,
+.video-row-blurb,
+.video-screens,
+.fx-legend,
+.fx-t {
+  font-size: 1.05rem;
+  color: #111;
+}
+.content-section p { line-height: 1.6; }
+
+/* Video and blog post pages: the banner carries the title now. */
+.video-page { padding-top: 24px; }
+.blog-post { padding-top: 28px; }
+.blog-post-header { margin-bottom: 0; }
+
+/* Features: counts beside group names in the same green. */
+.fx-group summary .fx-n { color: var(--mrr-head); }
+
+/* ── Footer ── */
+.site-footer .footer-bottom { font-size: 0.95rem; color: #e8e8e8; }
+.footer-links a { font-size: 1rem; color: #e8e8e8; }
+.footer-links a:hover { color: #fff; }
+.footer-brand p { color: #e8e8e8; }
+
+/* How-To Videos: Watched checkmark beside each row + count by the sort
+   (Fred, 2026-11-24). Black text, no grey. */
+.video-item { display: flex; align-items: stretch; gap: 10px; }
+.video-item .video-row { flex: 1; min-width: 0; }
+.video-watched {
+  flex: none; width: 92px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  background: #fff; color: #111; font-size: 1rem; font-weight: 700;
+  border: 2px solid var(--phr-border); border-radius: 12px; cursor: pointer;
+}
+.video-watched:hover { border-color: var(--phr-green); }
+.video-watched-box {
+  width: 34px; height: 34px; border: 2px solid #111; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; line-height: 1; color: #fff;
+}
+.video-watched.on { border-color: var(--phr-green); }
+.video-watched.on .video-watched-box { background: var(--phr-green); border-color: var(--phr-green); }
+.video-count { margin-left: auto; font-size: 1.05rem; font-weight: 700; color: #111; }
+
+/* Running time beside each video title (Fred, 2026-11-24). */
+.video-row-time { font-weight: 700; color: var(--mrr-head); white-space: nowrap; }
+
+/* Home intro paragraph spans the same width as the slideshow card below
+   it (Fred, 2026-11-24): the card is 1120 wide with 20px side padding. */
+.content-section.mrr-intro-wide { max-width: 1120px; padding: 20px 20px 12px; }

@@ -21,19 +21,41 @@
 /* ── Top bar — logo, site name, menu (2026-11-25) ──
    ~20% bigger than the shared style.css (PHR site keeps its own sizes).
    Bar height and the phone dropdown's top move together. */
-.site-nav .nav-inner { height: 72px; }
+.site-nav .nav-inner { height: 96px; }
 .site-nav .nav-logo { font-size: 1.5rem; white-space: nowrap; }
-.site-nav .nav-logo svg { width: 38px; height: 38px; }
 .site-nav .nav-links a { font-size: 1.15rem; white-space: nowrap; }
 @media (max-width: 1180px) { .site-nav .nav-links { gap: 20px; } }
-@media (max-width: 768px) { .site-nav .nav-links.open { top: 72px; } }
+@media (max-width: 768px) { .site-nav .nav-links.open { top: 96px; } }
+/* The loco app icon is the logo (moved up from the banner 2026-11-25),
+   pinned to the far left of the bar at its banner size. The old MRR
+   square is hidden. Side padding keeps the name clear of the icon. */
+.site-nav .nav-logo svg { display: none; }
+.site-nav { padding: 0 120px; }
+.site-nav::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 17px;
+  background: url("images/icon.png") center / cover no-repeat;
+  box-shadow: 0 4px 12px rgba(0,0,0,.14);
+}
+@media (max-width: 700px) {
+  .site-nav { padding: 0 0 0 68px; }
+  .site-nav .nav-inner { height: 64px; }
+  .site-nav .nav-links.open { top: 64px; }
+  .site-nav::before { left: 12px; width: 48px; height: 48px; border-radius: 11px; }
+}
 
 /* ── The banner — every page except Home ── */
 .mrr-banner {
   background: linear-gradient(160deg, #EAF6EC, #D2EAD7);
   color: #1A3C2A;
   text-align: center;
-  padding: 22px 24px 20px;
+  padding: 12px 24px 12px;
 }
 .mrr-banner h1 {
   font-size: 2.2rem;
@@ -57,7 +79,7 @@
    it drops under the subtitle instead. */
 .mrr-banner .mrr-buy {
   position: absolute;
-  top: 14px;
+  top: 10px;
   right: 24px;
   background: var(--phr-green);
   color: #fff !important;
@@ -73,26 +95,11 @@
 @media (max-width: 700px) {
   .mrr-banner .mrr-buy { position: static; display: inline-block; margin-top: 12px; }
 }
-/* The app icon sits on the left of every banner (2026-11-24). It is
-   pinned to the side, not in the flow, so the banner keeps its height and
-   the text stays centered. Side padding keeps long titles clear of it.
-   The image path is relative to this file. Hidden on narrow screens. */
+/* Side padding keeps the centered title clear of the App Store pill.
+   The app icon moved up to the top bar 2026-11-25. */
 .mrr-banner { position: relative; padding-left: 120px; padding-right: 120px; }
-.mrr-banner::before {
-  content: "";
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 76px;
-  height: 76px;
-  border-radius: 17px;
-  background: url("images/icon.png") center / cover no-repeat;
-  box-shadow: 0 4px 12px rgba(0,0,0,.14);
-}
 @media (max-width: 700px) {
   .mrr-banner { padding-left: 24px; padding-right: 24px; }
-  .mrr-banner::before { display: none; }
 }
 @media (max-width: 600px) {
   .mrr-banner h1 { font-size: 1.75rem; }
