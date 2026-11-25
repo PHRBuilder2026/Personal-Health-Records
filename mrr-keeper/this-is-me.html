@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>This Is Me — Visitor Stats</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="mrr.css">
+  <!-- FI-1253 (Fred, 2026-11-24): a hidden page, linked from nowhere, that
+       keeps Fred's own browsers out of the visitor stats. It sets one flag in
+       this browser; every page's analytics tag checks the flag and stays
+       silent. Covers the whole evansassoc-phr.com site (PHR and Model
+       Railroad Record Keeper pages). Per device and browser; clearing the
+       browser's history clears it. Past visits are not removed. This page
+       loads no analytics of its own. -->
+  <style>
+    .me-wrap { max-width: 640px; margin: 48px auto; padding: 0 24px; color: #111; }
+    .me-wrap h1 { font-size: 2rem; color: #1A3C2A; margin: 0 0 18px; }
+    .me-wrap p { font-size: 1.15rem; line-height: 1.5; margin: 0 0 16px; color: #111; }
+    .me-status { font-size: 1.3rem; font-weight: 700; padding: 18px 20px; border-radius: 12px;
+      border: 2px solid #111; margin: 24px 0; color: #111; background: #fff; }
+    .me-status.off { border-color: #2E8B57; background: #EAF6EC; }
+    .me-btn { font-size: 1.15rem; font-weight: 700; padding: 12px 22px; border-radius: 10px;
+      border: 2px solid #2E8B57; background: #2E8B57; color: #fff; cursor: pointer; }
+    .me-btn.alt { background: #fff; color: #1A3C2A; }
+  </style>
+</head>
+<body>
+  <main class="me-wrap">
+    <h1>This Is Me</h1>
+    <p>Use this page to keep your own visits out of the website&rsquo;s visitor stats.</p>
+    <div class="me-status" id="me-status">Checking this browser&hellip;</div>
+    <button class="me-btn" id="me-toggle" type="button"></button>
+    <p style="margin-top:24px">Do this once on each device and browser you use. Clearing this browser&rsquo;s history turns counting back on, so come back here afterwards. Visits from before you tapped the button stay in the numbers.</p>
+  </main>
+  <script>
+    (function () {
+      var KEY = 'fweNoStats';
+      var status = document.getElementById('me-status');
+      var btn = document.getElementById('me-toggle');
+      function isOff() { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+      function paint() {
+        var off = isOff();
+        status.className = 'me-status' + (off ? ' off' : '');
+        status.textContent = off
+          ? '✓ This browser is NOT counted in the visitor stats.'
+          : 'This browser IS counted in the visitor stats.';
+        btn.textContent = off ? 'Count this browser again' : "Don’t count this browser";
+        btn.className = 'me-btn' + (off ? ' alt' : '');
+      }
+      btn.addEventListener('click', function () {
+        try {
+          if (isOff()) localStorage.removeItem(KEY); else localStorage.setItem(KEY, '1');
+        } catch (e) {
+          status.textContent = 'This browser won’t save the setting (private browsing?). Try a normal window.';
+          return;
+        }
+        paint();
+      });
+      paint();
+    })();
+  </script>
+</body>
+</html>

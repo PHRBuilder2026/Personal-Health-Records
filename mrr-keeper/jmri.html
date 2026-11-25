@@ -12,6 +12,8 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
+    // Fred's own browsers don't count (FI-1253) — set on mrr-keeper/this-is-me.html.
+    try { if (localStorage.getItem('fweNoStats') === '1') window['ga-disable-G-18QZHJX2EM'] = true; } catch (e) {}
     gtag('config', 'G-18QZHJX2EM');
     // App Store button taps -> 'app_store_click' (Builder Web Stats, 2026-10-31).
     document.addEventListener('click', function (e) {
