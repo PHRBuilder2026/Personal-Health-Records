@@ -248,3 +248,24 @@
     gap: 0;
   }
 }
+
+/* Support page contact form (2026-11-25). Large dark text, no grey. */
+.mrr-contact { max-width: 760px; }
+.mrr-contact form { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
+.mrr-contact label { font-size: 1.05rem; font-weight: 700; color: #111; margin-top: 8px; }
+.mrr-contact input, .mrr-contact select, .mrr-contact textarea {
+  font: inherit; font-size: 1.05rem; color: #111; background: #fff;
+  border: 2px solid var(--phr-border); border-radius: 8px; padding: 10px 12px;
+}
+.mrr-contact input:focus, .mrr-contact select:focus, .mrr-contact textarea:focus { outline: none; border-color: var(--phr-green); }
+.mrr-contact button {
+  align-self: flex-start; margin-top: 14px;
+  background: var(--phr-green); color: #fff; border: 0; border-radius: 999px;
+  font-size: 1.1rem; font-weight: 700; padding: 10px 28px; cursor: pointer;
+}
+.mrr-contact button:hover { background: var(--phr-green-dark); }
+.mrr-contact button:disabled { opacity: .6; cursor: default; }
+.mrr-contact-status { font-size: 1.05rem; font-weight: 700; color: #111; min-height: 1.5em; }
+.mrr-trap { position: absolute; left: -9999px; }
+.footer-links h4 a { color: white; }
+.footer-links h4 a:hover { color: var(--phr-green-accent); }

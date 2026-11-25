@@ -75,6 +75,53 @@
 
   </section>
 
+  <!-- Contact form (2026-11-25). Sent by Web3Forms to Fred's support inbox;
+       the address never appears on the page. Hidden "botcheck" box = spam trap. -->
+  <section class="content-section mrr-contact" id="contact">
+    <h2>Send us a message</h2>
+    <p>Have a question or found a problem? Write to us here and we&rsquo;ll reply to the email you give. Already using the app? The envelope in the app&rsquo;s banner works too, and it tells us which screen you were on.</p>
+    <form id="mrr-contact-form" novalidate>
+      <input type="hidden" name="access_key" value="350914e3-321c-4b73-995c-2cc020a971d1">
+      <input type="hidden" name="from_name" value="MRR website">
+      <input type="checkbox" name="botcheck" class="mrr-trap" tabindex="-1" autocomplete="off">
+      <label for="mc-name">Name</label>
+      <input id="mc-name" name="name" type="text" required autocomplete="name">
+      <label for="mc-email">Your email</label>
+      <input id="mc-email" name="email" type="email" required autocomplete="email">
+      <label for="mc-topic">What it&rsquo;s about</label>
+      <select id="mc-topic" name="topic">
+        <option>Question</option>
+        <option>Bug</option>
+        <option>Feature idea</option>
+        <option>Other</option>
+      </select>
+      <label for="mc-msg">Message</label>
+      <textarea id="mc-msg" name="message" rows="7" required></textarea>
+      <button type="submit" id="mc-send">Send</button>
+      <p class="mrr-contact-status" id="mc-status" role="status"></p>
+    </form>
+  </section>
+  <script>
+  (function(){
+    var f=document.getElementById('mrr-contact-form'), st=document.getElementById('mc-status'), b=document.getElementById('mc-send');
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!f.checkValidity()){ st.textContent='Please fill in your name, your email and a message.'; return; }
+      var d=new FormData(f);
+      d.append('subject','MRR website: '+d.get('topic')+' from '+d.get('name'));
+      b.disabled=true; st.textContent='Sending\u2026';
+      fetch('https://api.web3forms.com/submit',{method:'POST',body:d})
+        .then(function(r){ return r.json(); })
+        .then(function(j){
+          if(j.success){ f.reset(); st.textContent='Thanks \u2014 we got your message and will reply by email.'; }
+          else { st.textContent='Sorry, that didn\u2019t send. Please try again in a minute.'; }
+        })
+        .catch(function(){ st.textContent='Sorry, that didn\u2019t send. Check your connection and try again.'; })
+        .then(function(){ b.disabled=false; });
+    });
+  })();
+  </script>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
@@ -95,7 +142,7 @@
         </ul>
       </div>
       <div class="footer-links">
-        <h4>Contact</h4>
+        <h4><a href="support.html#contact">Contact</a></h4>
         <ul>
           <li><a href="support.html">Get Help</a></li>
         </ul>
