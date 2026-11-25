@@ -18,6 +18,16 @@
 
 :root { --mrr-head: var(--phr-green-dark); }
 
+/* ── Top bar — logo, site name, menu (2026-11-25) ──
+   ~20% bigger than the shared style.css (PHR site keeps its own sizes).
+   Bar height and the phone dropdown's top move together. */
+.site-nav .nav-inner { height: 72px; }
+.site-nav .nav-logo { font-size: 1.5rem; white-space: nowrap; }
+.site-nav .nav-logo svg { width: 38px; height: 38px; }
+.site-nav .nav-links a { font-size: 1.15rem; white-space: nowrap; }
+@media (max-width: 1180px) { .site-nav .nav-links { gap: 20px; } }
+@media (max-width: 768px) { .site-nav .nav-links.open { top: 72px; } }
+
 /* ── The banner — every page except Home ── */
 .mrr-banner {
   background: linear-gradient(160deg, #EAF6EC, #D2EAD7);
@@ -26,7 +36,7 @@
   padding: 22px 24px 20px;
 }
 .mrr-banner h1 {
-  font-size: 2.65rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.2;
   color: #1A3C2A;
@@ -35,7 +45,7 @@
   text-wrap: balance;
 }
 .mrr-banner p {
-  font-size: 1.32rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: #2E8B57;
   margin: 6px auto 0;
@@ -85,7 +95,7 @@
   .mrr-banner::before { display: none; }
 }
 @media (max-width: 600px) {
-  .mrr-banner h1 { font-size: 2.1rem; }
+  .mrr-banner h1 { font-size: 1.75rem; }
 }
 
 /* ── Section headings ── */
