@@ -173,3 +173,7 @@
 
 /* Running time beside each video title (Fred, 2026-11-24). */
 .video-row-time { font-weight: 700; color: var(--mrr-head); white-space: nowrap; }
+
+/* Home intro paragraph spans the same width as the slideshow card below
+   it (Fred, 2026-11-24): the card is 1120 wide with 20px side padding. */
+.content-section.mrr-intro-wide { max-width: 1120px; padding: 20px 20px 12px; }
