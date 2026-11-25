@@ -194,3 +194,20 @@
 /* Home intro paragraph spans the same width as the slideshow card below
    it (Fred, 2026-11-24): the card is 1120 wide with 20px side padding. */
 .content-section.mrr-intro-wide { max-width: 1120px; padding: 20px 20px 12px; }
+
+/* How-To Videos list: video-camera icon instead of the play circle, wider
+   list and tighter rows so more videos fit on screen (Fred, 2026-11-25).
+   The list page only — single video pages keep their 900px width. */
+.video-page:has(.video-list) { max-width: 1200px; padding-top: 16px; }
+.video-list { gap: 8px; }
+.video-row { padding: 10px 16px; gap: 14px; align-items: center; }
+.video-row-play {
+  width: 48px; height: 34px;
+  border-radius: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 34'%3E%3Crect x='1' y='4' width='32' height='26' rx='5' fill='%232E8B57'/%3E%3Cpath d='M35 13 L47 6 V28 L35 21 Z' fill='%232E8B57'/%3E%3C/svg%3E") center / contain no-repeat;
+  font-size: 0; color: transparent;
+}
+.video-item { gap: 8px; }
+.video-watched { width: 84px; gap: 4px; border-radius: 10px; }
+.video-watched-box { width: 30px; height: 30px; }
+.video-sort { margin-bottom: 10px; }
