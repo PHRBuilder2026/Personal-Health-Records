@@ -22,7 +22,7 @@
    ~20% bigger than the shared style.css (PHR site keeps its own sizes).
    Bar height and the phone dropdown's top move together. */
 .site-nav .nav-inner { height: 96px; }
-.site-nav .nav-logo { font-size: 1.5rem; white-space: nowrap; }
+.site-nav .nav-logo { font-size: 1.75rem; white-space: nowrap; }
 .site-nav .nav-links a { font-size: 1.15rem; white-space: nowrap; }
 @media (max-width: 1180px) { .site-nav .nav-links { gap: 20px; } }
 @media (max-width: 768px) { .site-nav .nav-links.open { top: 96px; } }
@@ -48,6 +48,7 @@
   .site-nav .nav-inner { height: 64px; }
   .site-nav .nav-links.open { top: 64px; }
   .site-nav::before { left: 12px; width: 48px; height: 48px; border-radius: 11px; }
+  .site-nav .nav-logo { font-size: 1.15rem; }
 }
 
 /* ── The banner — every page except Home ── */
@@ -202,7 +203,7 @@
 .video-list { gap: 8px; }
 .video-row { padding: 10px 16px; gap: 14px; align-items: center; }
 .video-row-play {
-  width: 48px; height: 34px;
+  width: 32px; height: 23px;
   border-radius: 0;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 34'%3E%3Crect x='1' y='4' width='32' height='26' rx='5' fill='%232E8B57'/%3E%3Cpath d='M35 13 L47 6 V28 L35 21 Z' fill='%232E8B57'/%3E%3C/svg%3E") center / contain no-repeat;
   font-size: 0; color: transparent;
