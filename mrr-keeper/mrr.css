@@ -212,3 +212,16 @@
 .video-watched { width: 84px; gap: 4px; border-radius: 10px; }
 .video-watched-box { width: 30px; height: 30px; }
 .video-sort { margin-bottom: 10px; }
+
+/* Footer page list: 3 columns, no "App" heading (Fred, 2026-11-25).
+   Picked out by its Features link so the Contact column is untouched. */
+.footer-links:has(a[href$="features.html"]) h4 { display: none; }
+.footer-links:has(a[href$="features.html"]) ul {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  column-gap: 48px;
+}
+@media (max-width: 768px) {
+  .footer-links:has(a[href$="features.html"]) ul { display: block; }
+}
