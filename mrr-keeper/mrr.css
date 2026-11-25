@@ -150,3 +150,23 @@
 .footer-links a { font-size: 1rem; color: #e8e8e8; }
 .footer-links a:hover { color: #fff; }
 .footer-brand p { color: #e8e8e8; }
+
+/* How-To Videos: Watched checkmark beside each row + count by the sort
+   (Fred, 2026-11-24). Black text, no grey. */
+.video-item { display: flex; align-items: stretch; gap: 10px; }
+.video-item .video-row { flex: 1; min-width: 0; }
+.video-watched {
+  flex: none; width: 92px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  background: #fff; color: #111; font-size: 1rem; font-weight: 700;
+  border: 2px solid var(--phr-border); border-radius: 12px; cursor: pointer;
+}
+.video-watched:hover { border-color: var(--phr-green); }
+.video-watched-box {
+  width: 34px; height: 34px; border: 2px solid #111; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; line-height: 1; color: #fff;
+}
+.video-watched.on { border-color: var(--phr-green); }
+.video-watched.on .video-watched-box { background: var(--phr-green); border-color: var(--phr-green); }
+.video-count { margin-left: auto; font-size: 1.05rem; font-weight: 700; color: #111; }

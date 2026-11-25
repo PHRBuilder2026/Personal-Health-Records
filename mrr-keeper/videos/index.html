@@ -62,6 +62,7 @@
       <option value="latest">Latest</option>
       <option value="oldest">Oldest</option>
     </select>
+    <span class="video-count" id="video-count"></span>
   </div>
   <!-- Each row: data-date = day added (yyyy-mm-dd). data-order breaks ties. -->
   <div class="video-list" id="video-list">
@@ -140,33 +141,71 @@
 
 <script>
   // Date on each row + Latest / Oldest sort (Fred, 2026-11-22).
+  // Watched checkmarks + "Watched N of M" count (Fred, 2026-11-24): set
+  // only when the user taps the checkmark, never by opening a video. Kept
+  // in this browser's localStorage — per device, nothing sent anywhere.
   (function () {
     var list = document.getElementById('video-list');
     var pick = document.getElementById('video-sort');
+    var count = document.getElementById('video-count');
     var rows = Array.prototype.slice.call(list.querySelectorAll('.video-row'));
     var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    rows.forEach(function (r) {
+    var KEY = 'mrrVideosWatched';
+    var watched = {};
+    try { watched = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { watched = {}; }
+    function save() { try { localStorage.setItem(KEY, JSON.stringify(watched)); } catch (e) {} }
+    function showCount() {
+      var n = rows.filter(function (r) { return watched[r.getAttribute('href')]; }).length;
+      count.textContent = 'Watched ' + n + ' of ' + rows.length;
+    }
+    var items = rows.map(function (r) {
       var d = (r.getAttribute('data-date') || '').split('-');
       if (d.length === 3) {
         r.querySelector('.video-row-date').textContent =
           months[parseInt(d[1], 10) - 1] + ' ' + parseInt(d[2], 10) + ', ' + d[0];
       }
+      var key = r.getAttribute('href');
+      var title = r.querySelector('.video-row-title').textContent;
+      var item = document.createElement('div');
+      item.className = 'video-item';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'video-watched';
+      btn.innerHTML = '<span class="video-watched-box" aria-hidden="true"></span><span>Watched</span>';
+      function paint() {
+        var on = !!watched[key];
+        btn.classList.toggle('on', on);
+        btn.querySelector('.video-watched-box').textContent = on ? '\u2713' : '';
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        btn.setAttribute('aria-label', (on ? 'Watched: ' : 'Mark as watched: ') + title);
+      }
+      btn.addEventListener('click', function () {
+        if (watched[key]) delete watched[key]; else watched[key] = 1;
+        save(); paint(); showCount();
+      });
+      paint();
+      list.insertBefore(item, r);
+      item.appendChild(r);
+      item.appendChild(btn);
+      item._row = r;
+      return item;
     });
-    function order(a, b) { return (+a.getAttribute('data-order')) - (+b.getAttribute('data-order')); }
+    function order(a, b) { return (+a._row.getAttribute('data-order')) - (+b._row.getAttribute('data-order')); }
     function sortRows() {
       var latest = pick.value !== 'oldest';
-      rows.sort(function (a, b) {
-        var da = a.getAttribute('data-date'), db = b.getAttribute('data-date');
+      items.sort(function (a, b) {
+        var da = a._row.getAttribute('data-date'), db = b._row.getAttribute('data-date');
         if (da === db) return order(a, b);
         return latest ? (da < db ? 1 : -1) : (da < db ? -1 : 1);
       });
-      rows.forEach(function (r) { list.appendChild(r); });
+      items.forEach(function (it) { list.appendChild(it); });
     }
     try { var saved = localStorage.getItem('mrrVideoSort'); if (saved) pick.value = saved; } catch (e) {}
     pick.addEventListener('change', function () {
       try { localStorage.setItem('mrrVideoSort', pick.value); } catch (e) {}
       sortRows();
     });
+    showCount();
     sortRows();
   })();
 </script>
