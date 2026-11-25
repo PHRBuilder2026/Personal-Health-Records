@@ -225,3 +225,26 @@
 @media (max-width: 768px) {
   .footer-links:has(a[href$="features.html"]) ul { display: block; }
 }
+
+/* Top bar on two lines (Fred, 2026-11-25): site name on the left, menu on
+   the line below it, spread evenly across 75% of the screen width. The
+   loco icon stays at the far left, centered on both lines. Phones keep
+   the one-line bar with the ☰ button. */
+@media (min-width: 769px) {
+  .site-nav .nav-inner {
+    max-width: none;
+    margin: 0;
+    padding: 10px 0;
+    height: auto;
+    min-height: 96px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 6px;
+  }
+  .site-nav .nav-links {
+    width: min(75vw, 100%);
+    justify-content: space-between;
+    gap: 0;
+  }
+}
