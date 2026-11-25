@@ -170,3 +170,6 @@
 .video-watched.on { border-color: var(--phr-green); }
 .video-watched.on .video-watched-box { background: var(--phr-green); border-color: var(--phr-green); }
 .video-count { margin-left: auto; font-size: 1.05rem; font-weight: 700; color: #111; }
+
+/* Running time beside each video title (Fred, 2026-11-24). */
+.video-row-time { font-weight: 700; color: var(--mrr-head); white-space: nowrap; }
