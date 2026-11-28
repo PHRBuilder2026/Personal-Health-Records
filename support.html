@@ -97,6 +97,14 @@
     <p>PHR is a personal-use application. It is not a Covered Entity under HIPAA and is not intended for use by healthcare providers or insurers. Because your data never leaves your device, there is no server-side data to protect — you have full control.</p>
   </section>
 
+  <!-- Contact (2026-11-27, FI-1268): the button opens the site-wide message
+       popup (phr-contact.js). -->
+  <section class="content-section phr-contact" id="contact">
+    <h2>Send us a message</h2>
+    <p>Have a question or found a problem? Write to us and we&rsquo;ll reply to the email you give. Already using the app? Contact Support in the app works too, and it tells us which screen you were on.</p>
+    <p><a class="phr-cf-open" href="#contact" data-phr-contact>Send us a message</a></p>
+  </section>
+
   <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
@@ -114,9 +122,9 @@
         </ul>
       </div>
       <div class="footer-links">
-        <h4>Contact</h4>
+        <h4><a href="support.html#contact" data-phr-contact>Contact</a></h4>
         <ul>
-          <li>Fred@evansassoc-phr.com</li>
+          <li><a href="support.html#contact" data-phr-contact>Send us a message</a></li>
           <li><a href="support.html">Get Help</a></li>
         </ul>
       </div>
@@ -124,6 +132,7 @@
     <div class="footer-bottom">
       &copy; 2026 Evans &amp; Associates PHR, LLC. All rights reserved.
     </div>
+    <script src="phr-contact.js" defer></script>
   </footer>
 
 </body>
